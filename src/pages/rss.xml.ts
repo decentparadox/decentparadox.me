@@ -8,9 +8,9 @@ export async function GET(context: APIContext) {
     const posts = await getAllPosts()
 
     return rss({
-      title: SITE.title,
-      description: SITE.description,
-      site: context.site ?? SITE.href,
+      title: SITE.TITLE,
+      description: SITE.DESCRIPTION,
+      site: context.site ?? SITE.SITEURL,
       items: posts.map((post) => ({
         title: post.data.title,
         description: post.data.description,

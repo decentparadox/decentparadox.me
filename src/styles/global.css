@@ -4,11 +4,15 @@
 
 @theme inline {
   --font-sans:
-    Geist, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    InclusiveSans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-mono:
-    Geist Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  --font-supply:
+    supply-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
+  --font-serif: PPEditorial, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serifItalic: PPEditorialItalic, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -35,49 +39,83 @@
   --color-ring: var(--ring);
 }
 
+
+
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/GeistVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: "supply-mono";
+  src: url("/fonts/supply-mono/PPSupplyMono-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMonoVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: "supply-mono";
+  src: url("/fonts/supply-mono/PPSupplyMono-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "supply-mono";
+  src: url("/fonts/supply-mono/PPSupplyMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "supply-mono";
+  src: url("/fonts/supply-mono/PPSupplyMono-Ultralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PPEditorial";
+  src: url("/fonts/PPEditorialNew-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PPEditorialItalic";
+  src: url("/fonts/PPEditorialNew-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "InclusiveSans";
+  src: url("/fonts/InclusiveSans-VariableFont_wght.ttf") format("truetype");
+}
+
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(96.86% 0.0131 82.4);
+  --foreground: oklch(24.71% 0.0024 247.92);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(54.67% 0.2475 275.21);
+  --accent-foreground: oklch(96.86% 0.0131 82.4);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
 }
 
 [data-theme='dark'] {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --background: oklch(24.71% 0.0024 247.92);
+  --foreground: oklch(96.86% 0.0131 82.4);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: oklch(73.85% 0.0976 284.42);
+  --accent-foreground: oklch(24.71% 0.0024 247.92);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --ring: oklch(0.556 0 0);
@@ -87,7 +125,6 @@
   *,
   ::after,
   ::before,
-  ::backdrop,
   ::file-selector-button {
     @apply border-border outline-ring/50 tracking-tight;
   }

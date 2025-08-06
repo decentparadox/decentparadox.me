@@ -16,12 +16,16 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/markdown-remark": "^6.3.1",
     "@astrojs/mdx": "^4.2.6",
+    "@astrojs/netlify": "^6.5.6",
     "@astrojs/react": "^4.2.7",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
     "@expressive-code/plugin-collapsible-sections": "^0.40.2",
     "@expressive-code/plugin-line-numbers": "^0.40.2",
     "@iconify-json/lucide": "^1.2.26",
+    "@neondatabase/serverless": "^1.0.1",
+    "@phosphor-icons/react": "^2.1.10",
+    "@radix-ui/react-hover-card": "^1.1.14",
     "@tailwindcss/vite": "^4.0.7",
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
@@ -41,6 +45,7 @@
     "rehype-pretty-code": "^0.14.1",
     "remark-emoji": "^5.0.1",
     "remark-math": "^6.0.0",
+    "rss-parser": "^3.13.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.7",
     "typescript": "^5.8.3"
@@ -66,6 +71,13 @@
           "parser": "astro"
         }
       }
+    ]
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sharp"
     ]
   }
 }

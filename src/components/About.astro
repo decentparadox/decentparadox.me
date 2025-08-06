@@ -1,0 +1,71 @@
+---
+import Currently from '@/components/Currently'
+---
+
+<section class="w-full my-0 mt-16 flex flex-col gap-2 space-y-8 font-sans">
+  <div
+    class="md:gap-auto ml-auto flex w-full flex-col justify-between gap-10 md:flex-row"
+  >
+    <div class="about-col flex w-full flex-col gap-4 text-justify">
+      <div class="flex items-center justify-between font-sans opacity-75">
+        <h2 class="font-serif text-accent">(About me)</h2>
+      </div>
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-1 flex-col gap-4">
+          <span>
+            Hey, I'm{' '}
+            <span class="font-serifItalic text-accent"> Sasank Reddy </span>
+            , I'm studying Computer Science at Amrita School of Engineering. I like
+            designing and coding, and sometimes I play CTFs.{' '}
+          </span>
+          <p>
+            I'm a student who loves learning. I may not have a fancy mission,
+            but my passion for gaining knowledge and mastering new skills keeps
+            me going.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about-col flex w-full flex-col gap-4 text-justify">
+      <div class="flex items-center justify-between font-sans opacity-75">
+        <h2 class="font-serif text-accent">(Currently)</h2>
+      </div>
+      <div class="flex flex-col gap-8">
+        <Currently client:load />
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4">
+    <div class="flex items-center justify-between font-sans opacity-75">
+      <h2 class="font-serif text-accent">(Methodology)</h2>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="flex flex-col gap-4">
+        <h1 class="font-serifItalic text-accent">Research</h1>
+        <p>
+          I start by understanding the problem, the audience, and the market.
+          This involves analyzing similar products, defining goals, and
+          gathering all necessary context.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h1 class="font-serifItalic text-accent">Design</h1>
+        <p>
+            Based on the research, I create user flows, wireframes, and high-fidelity designs. I focus on usability, visual identity, and a consistent experience across the app.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h1 class="font-serifItalic text-accent">Developing</h1>
+        <p>
+            I turn designs into functional apps using clean, scalable code. I prioritize performance, responsiveness, and a seamless user interface backed by solid architecture.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h1 class="font-serifItalic text-accent">Handoff</h1>
+        <p>
+            Once development is complete, I prepare documentation and assets for deployment or client delivery. I ensure everything is maintainable and easy for others to continue working on.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

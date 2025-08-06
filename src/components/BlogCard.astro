@@ -26,38 +26,54 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
 ---
 
 <div
-  class="hover:bg-secondary/50 rounded-xl border p-4 transition-colors duration-300 ease-in-out"
+  class="not-prose group relative overflow-hidden border border-b-0 border-l-0 border-r-0 border-t-2 py-4 md:px-4 transition-colors duration-300 ease-in-out"
 >
   <Link
     href={`/${entry.collection}/${entry.id}`}
     class="flex flex-col gap-4 sm:flex-row"
   >
+    <!-- Image Section -->
     {
       entry.data.image && (
-        <div class="max-w-3xs sm:shrink-0">
+        <div class="relative max-w-[200px] transition-all duration-300 ease-in-out group-hover:scale-105 sm:flex-shrink-0">
           <Image
             src={entry.data.image}
             alt={entry.data.title}
             width={1200}
             height={630}
-            class="object-cover"
+            class="w-0 object-cover opacity-0 transition-all duration-300 ease-in-out group-hover:w-[200px] group-hover:opacity-100 block dark:hidden"
           />
+          {entry.data.darkimage && (
+            <Image
+              src={entry.data.darkimage}
+              alt={entry.data.title}
+              width={1200}
+              height={630}
+              class="w-0 object-cover opacity-0 transition-all duration-300 ease-in-out group-hover:w-[200px] group-hover:opacity-100 hidden dark:block"
+            />
+          )}
         </div>
       )
     }
 
-    <div class="grow">
-      <h3 class="mb-1 text-lg font-medium">{entry.data.title}</h3>
-      <p class="text-muted-foreground mb-2 text-sm">{entry.data.description}</p>
-
+    <!-- Text and Content Section -->
+    <div
+      class="flex-grow transition-transform duration-300 ease-in-out md:-ml-7 md:group-hover:translate-x-8"
+    >
+      <h3 class="mb-1 font-serifItalic text-lg text-accent">
+        {entry.data.title}
+      </h3>
+      <p class="mb-2 max-w-lg text-ellipsis text-sm text-muted-foreground">
+        {entry.data.description}
+      </p>
       <div
-        class="text-muted-foreground mb-2 flex flex-wrap items-center gap-x-2 text-xs"
+        class="mb-2 flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground"
       >
         {
           authors.length > 0 && (
             <>
               {authors.map((author) => (
-                <div class="flex items-center gap-x-1.5">
+                <div class="flex items-center gap-x-1.5 text-accent">
                   <AvatarComponent
                     client:load
                     src={author.avatar}
@@ -68,38 +84,30 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
                   <span>{author.name}</span>
                 </div>
               ))}
-              <Separator orientation="vertical" className="h-4!" />
+              <Separator orientation="vertical" className="h-4" />
             </>
           )
         }
-        <span>{formattedDate}</span>
-        <Separator orientation="vertical" className="h-4!" />
-        <span>{readTime}</span>
-        {
-          subpostCount > 0 && (
-            <>
-              <Separator orientation="vertical" className="h-4!" />
-              <span class="flex items-center gap-1">
-                <Icon name="lucide:file-text" class="size-3" />
-                {subpostCount} subpost{subpostCount === 1 ? '' : 's'}
-              </span>
-            </>
-          )
-        }
+        <span class="text-accent">{formattedDate}</span>
+        <Separator orientation="vertical" className="h-4" />
+        <span class="text-accent">{readTime}</span>
       </div>
-
       {
         entry.data.tags && (
           <div class="flex flex-wrap gap-2">
             {entry.data.tags.map((tag) => (
-              <Badge variant="secondary" className="flex items-center gap-x-1">
-                <Icon name="lucide:hash" class="size-3" />
-                {tag}
-              </Badge>
+              <Badge variant="secondary">{tag}</Badge>
             ))}
           </div>
         )
       }
     </div>
+
+    <!-- Arrow -->
+    <p
+      class="absolute right-4 top-1/2 hidden text-xl opacity-50 transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:opacity-100 md:block"
+    >
+      &#8599;
+    </p>
   </Link>
 </div>

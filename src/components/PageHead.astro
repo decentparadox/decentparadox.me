@@ -8,16 +8,16 @@ interface Props {
 }
 
 const {
-  title = SITE.title,
-  description = SITE.description,
+  title = SITE.TITLE,
+  description = SITE.DESCRIPTION,
   noindex = false,
 } = Astro.props
 const image = new URL('/static/1200x630.png', Astro.site)
 ---
 
-<title>{`${title} | ${SITE.title}`}</title>
+<title>{`${title} | ${SITE.TITLE}`}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={SITE.href} />
+<link rel="canonical" href={SITE.SITEURL} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
 <meta property="og:title" content={title} />
@@ -25,8 +25,8 @@ const image = new URL('/static/1200x630.png', Astro.site)
 <meta property="og:image" content={image} />
 <meta property="og:image:alt" content={title} />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content={SITE.locale} />
-<meta property="og:site_name" content={SITE.title} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content={SITE.TITLE} />
 <meta property="og:url" content={Astro.url} />
 
 <meta name="twitter:title" content={title} />

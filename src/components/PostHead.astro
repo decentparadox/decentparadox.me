@@ -9,19 +9,19 @@ interface Props {
 
 const { post } = Astro.props
 
-const title = post.data.title || SITE.title
-const description = post.data.description || SITE.description
+const title = post.data.title || SITE.TITLE
+const description = post.data.description || SITE.DESCRIPTION
 const image = new URL('/static/1200x630.png', Astro.site)
 const author =
   post.data.authors && post.data.authors.length > 0
     ? post.data.authors.join(', ')
-    : SITE.author
+    : 'decentparadox'
 ---
 
-<title>{`${title} | ${SITE.title}`}</title>
-<meta name="title" content={`${title} | ${SITE.title}`} />
+<title>{`${title} | ${SITE.TITLE}`}</title>
+<meta name="title" content={`${title} | ${SITE.TITLE}`} />
 <meta name="description" content={description} />
-<link rel="canonical" href={SITE.href} />
+<link rel="canonical" href={SITE.SITEURL} />
 
 {isSubpost(post.id) && <meta name="robots" content="noindex" />}
 
@@ -30,13 +30,13 @@ const author =
 <meta
   property="og:image"
   content={post?.data?.image?.src
-    ? `${SITE.href}${post.data.image.src}`
+    ? `${SITE.SITEURL}${post.data.image.src}`
     : image}
 />
 <meta property="og:image:alt" content={title} />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content={SITE.locale} />
-<meta property="og:site_name" content={SITE.title} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content={SITE.TITLE} />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:author" content={author} />
 
@@ -45,7 +45,7 @@ const author =
 <meta
   property="twitter:image"
   content={post?.data?.image?.src
-    ? `${SITE.href}${post.data.image.src}`
+    ? `${SITE.SITEURL}${post.data.image.src}`
     : image}
 />
 <meta name="twitter:image:alt" content={title} />

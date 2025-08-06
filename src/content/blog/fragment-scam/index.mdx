@@ -1,0 +1,136 @@
+---
+title: "Telegram Fragment Scam"
+description: 'My Close Call with a Scammer Over a Username Sale'
+authors: ['decentparadox']
+date: '2024-12-27'
+tags: ['telegram', 'crypto', 'scam']
+image: './lightOG.png'
+darkimage: './1200x630.png'
+---
+
+
+
+It all began with an offer that seemed too good to be true. Someone wanted to buy my username, decentparadox, for a jaw-dropping 3500 TON. Interested, I decided to play along, hinting that I might sell if the offer got interesting enough. I would have sold it if he was a legit buyer —— Then, the buyer increased their bid to 6,000 TON. My skepticism kicked in. Why would anyone pay such a ridiculous amount for a username as ordinary as mine? It screamed "scam," but I was curious.
+
+<img src="/static/images/fragment-scam/Scam_convo.png" class="rounded-xl" />
+
+## The Negotiation Begins
+
+So, I suggested we list the username on Fragment, a legit auction site for collectible usernames. The buyer claimed to be an "authorized Fragment merchant" and said we could finalize the deal instantly. Then they sent me a link to a bot that was supposed to handle everything. My instincts kicked in, and I felt uneasy.
+
+When I checked out the bot, it was all in Russian, which was a huge red flag. I mean, who uses a bot in just one language for something so global? Trusting my gut, I decided this was definitely shady.
+
+
+I confronted the scammer. I pointed out their poorly executed plan and even jokingly offered to help them write better scripts. Enraged, they fired back with (“What scam???? Are you crazy!!!!”) before deleting the entire chat from my side. Classic scammer move.
+
+---
+
+# Dissection
+
+The scammer’s link led to a Telegram Mini App (TMA):
+
+https://t.me/Bid_Notification_sell_bot/notify?startapp=nftwhale101e-6000-300-1735227654
+
+For the uninitiated, TMAs are essentially websites connected to a bot for seamless Telegram integration. This link mimicked Fragment’s user interface flawlessly. However, a closer look revealed inconsistencies. Right-clicking was disabled, but I used Fiddler Classic to inspect the requests. No external API calls were made except to the home page. Suspicious. Further digging revealed how the scammer customized the page using launch parameters:
+```javascript
+import { useLaunchParams } from "@telegram-apps/sdk-react";
+const lp = useLaunchParams();
+
+
+const [param1, param2, param3] = lp.startParam.split("-");
+```
+
+The nftwhale101e-6000-300-1735227654 part of the link provided parameters to render a fake page tailored to the interaction.
+
+## The Fusion Drainer: The Scam’s Engine
+
+The site called a suspicious script on load:
+```html
+<script>
+  (function() {
+    function initDrainer() {
+      if (window.drainer && typeof window.drainer.init === 'function') {
+        try {
+          window.drainer.init({
+            autoCreateTransaction: true,
+            autoOpenModal: false,
+            disableWalletSave: false
+          });
+        } catch (error) {
+          console.error('Error initializing FusionDrainer:', error);
+        }
+      } else {
+        console.warn('FusionDrainer not yet loaded. Retrying...');
+        setTimeout(initDrainer, 100);
+      }
+    }
+
+    window.addEventListener('load', initDrainer);
+  })();
+</script>
+```
+Fusion Drainer is a malicious tool designed to drain assets from a wallet on the TON network. It uses a technique called JettonProxyHoneypot, forwarding all TONs from the wallet’s balance and self-destroying the wallet. Essentially, it’s a sophisticated honeypot for scammers.
+
+## How Jetton Proxy Works
+
+Jetton Proxy operates as a mechanism to facilitate fraudulent transactions on the TON network. By exploiting the TON blockchain’s flexibility, scammers use a proxy contract to relay all funds to their controlled wallets. The proxy contract acts as a middleman, making it appear as if the transaction is legitimate. However, once the user approves the transaction, their assets are immediately drained through the proxy.
+This is a proxy that sends body refs of incoming internal message as internal message with mode = 128+32 (forwards all TONs from balance and self-destroy). 
+
+Jetton Proxy scams often involve:
+- Fake Offers: Users are lured with lucrative deals or fake NFT sales.
+- Deceptive Smart Contracts: Contracts are designed to forward TON tokens while bypassing standard security measures.
+- Wallet Impersonation: The proxy mimics genuine wallets or services to mask its true intent.
+
+Understanding this mechanism is key to identifying and avoiding such scams.
+
+---
+## Fusion driver config
+
+The Fusion Drainer’s YAML configuration revealed more:
+
+```yaml
+api:
+  # Base URL for the API
+  base_url: "https://yourdomain.com"
+telegram:
+  # Token for your Telegram bot
+  bot_token: "your_bot_token"
+
+  # Global Chat ID for logs
+  global_logs_chat_id: "-1234567890"
+
+  # Forcefully disable visit logs in the global channel
+  force_disable_visit_logs: false
+
+  # Duplicate logs of successful transactions to the global channel
+  duplicate_successful_transaction_logs: true
+whitelist:
+  # Whitelist of user IDs allowed to interact with the bot
+  - 123456789
+  - 987654321
+ton:
+  # API key for accessing TON services
+  apiKey: "your_api_key"
+
+  # API endpoint URL for TON services
+  endpoint: "https://toncenter.com/api/v2/jsonRPC"
+
+  # Owner's mnemonic phrase
+  # This is required for deploying and managing smart contracts.
+  mnemonic: "your_mnemonic_phrase"
+nft:
+  # Fallback static price for teleitem domain in TON if API fails to provide a price
+  teleitemDomainFallbackPrice: 1
+
+  # Fallback static price for teleitem number in TON if API fails to provide a price
+  teleitemNumberFallbackPrice: 10
+
+  # Fallback static price for teleitem username in TON if API fails to provide a price
+  teleitemUsernameFallbackPrice: 10
+```
+Although [disclaimer](https://fusiondrainer-docs.info/en/disclaimer.html) says its prohibited for illegal use, documentation in one of pages clearly suggests they want to sell this software to people who use it for illegal use. Logging events to a global chat, maintaining a whitelist—these are tools for malicious actors.
+
+## Reporting 
+<img src="/static/images/fragment-scam/abuse_report.png" class="rounded-xl" />
+
+I reported the scammer to Cloudflare, detailing the phishing risks and providing evidence of the bot and fake site. To Telegram, I used the @notoscam bot to flag the scammer’s accounts. Every report helps disrupt their operations and protect others from falling victim.

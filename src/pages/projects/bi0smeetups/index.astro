@@ -1,0 +1,536 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Container from '@/components/Container.astro'
+import Link from '@/components/Link.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout>
+  <Container class="flex grow flex-col gap-y-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Projects', href: '/projects', icon: 'lucide:archive' },
+        {
+          label: 'bi0smeetups',
+          href: '/projects/bi0smeetups',
+          icon: 'lucide:sticky-note',
+        },
+      ]}
+    />
+
+    <div class="flex flex-col rounded-none pt-10 font-sans" role="main">
+      <div class="flex flex-wrap justify-between gap-5 max-md:max-w-full">
+        <div class="flex flex-col max-md:max-w-full">
+          <h1
+            class="self-start font-serifItalic text-5xl leading-none tracking-tighter text-accent max-md:text-4xl"
+          >
+            bi0s Meetups
+          </h1>
+          <div
+            class="mt-5 text-lg font-medium leading-tight tracking-tighter text-foreground max-md:max-w-full"
+          >
+            Meetups page organized by India's #1 CTF and Cybersecurity research
+            team
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-between gap-2 self-start text-right text-sm leading-loose tracking-tighter text-accent md:w-auto md:flex-col"
+        >
+          <div>Product, UX/UI, Dev</div>
+          <div class="self-end">2024-2025</div>
+        </div>
+      </div>
+      <div class="mt-8 flex items-center justify-center rounded-xl bg-blue-100">
+        <div
+          class="my-auto flex w-[1683px] max-w-[1683px] flex-col self-stretch overflow-hidden rounded-xl max-md:max-w-full"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/90043f19aa29a9be10bb9045022a3aa2965418c2b3cb4d6b60e991d69ba70a7e?placeholderIfAbsent=true&apiKey=ee661ca2f4a0429c903e88b171d50fcc"
+            alt="bi0s Meetups platform showcase"
+            class="aspect-[1.75] w-full object-contain max-md:max-w-full"
+          />
+        </div>
+      </div>
+      <div
+        class="mt-11 flex w-full items-center justify-between gap-10 max-md:mt-10 max-md:max-w-full max-md:flex-wrap"
+      >
+        <div
+          class="my-auto flex w-[925px] min-w-[240px] flex-col self-stretch pt-2 text-sm leading-loose tracking-tighter text-foreground max-md:max-w-full"
+        >
+          <div
+            class="mr-20 text-2xl leading-8 tracking-tighter text-foreground max-md:mr-2.5 max-md:max-w-full"
+          >
+            A dynamic platform to organize and promote monthly cybersecurity
+            meetups for India's #1 CTF and Cybersecurity Research Team.
+          </div>
+          <div class="mr-16 mt-7 leading-5 max-md:mr-2.5 max-md:max-w-full">
+            
+            bi0s meetups point conveniently provides the organizers & attendees
+            with an active platform through which such a monthly cybersecurity
+            event would be effectively managed. Since this website will be
+            producing new pages for every meetup, the design scheme should
+            accommodate the theme of the desired meetup and fully functional as
+            well.
+            <br />
+            <br />
+            The platform unites the information about the event, rsvp function, and
+            the convenient and appealing designs to build professional and user-friendly
+            space for cybersecurity communities.
+          
+          </div>
+          <ul
+            class="mt-6 list-none space-y-3 pl-4 max-md:max-w-full max-md:pl-4"
+          >
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              Solely responsible for the design, development, and branding assets,
+              including posters and brochures used for marketing.
+            </li>
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              Designed and developed a meetups app to facilitate the creation of
+              new meetups and enable organizers to view registered users effortlessly.
+            </li>
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              Focused on providing a seamless user experience while maintaining a
+              professional and visually consistent brand identity.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="my-auto flex w-[408px] min-w-[240px] flex-col items-start self-stretch py-0.5 pr-14 text-sm font-semibold leading-5 tracking-tighter text-foreground"
+        >
+          <h2 class="leading-none">Contribution</h2>
+          <div class="mt-3 text-sm tracking-tighter text-foreground">
+            Meetup Website: UI Design, Prototyping, Visual,
+            <br />
+            Research, Scalability, Design system, Development, Deployment
+          </div>
+          <div class="mt-4 text-sm tracking-tighter text-foreground">
+            Admin App: UI Design, Development
+          </div>
+          <h2 class="mt-10 leading-none">Website</h2>
+          <a
+            href="https://bi0smeetup.in"
+            class="mt-2.5 whitespace-nowrap text-base leading-none tracking-tighter text-accent hover:underline focus:outline-none focus:ring-2 focus:ring-violet-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://bi0smeetup.in
+          </a>
+          <h2 class="mt-16 leading-none max-md:mt-10">Duration</h2>
+          <div class="z-10 mt-3.5 w-60 text-sm tracking-tighter text-foreground">
+            Design: 1 month
+            <br />
+            Development: 4 months
+            <br />
+            Ongoing Improvements: 3 months
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col rounded-none font-sans">
+      <div class="w-full max-md:max-w-full">
+        <div class="flex gap-5 max-md:flex-col">
+          <div class="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+            <div
+              class="mx-auto -mb-0.5 flex h-[567px] w-[830px] max-w-full shrink-0 rounded-xl bg-foreground  dark:text-white dark:bg-zinc-900 max-md:mt-6"
+              role="img"
+              aria-label="Meetup registration platform showcase"
+              tabindex="0"
+            >
+              <div class="my-auto p-4 ">
+                <div class="flex gap-5 max-md:flex-col ">
+                  <div class="flex w-[60%] flex-col max-md:ml-0 max-md:w-full ">
+                    <div
+                      class="my-auto mr-0 flex flex-col self-stretch text-2xl font-semibold leading-8 tracking-tighter text-background max-md:mt-10"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b8732d430c6ba26ced5c35559f19c3700275918e49909eaa5b631877c39f228?placeholderIfAbsent=true&apiKey=ee661ca2f4a0429c903e88b171d50fcc"
+                        alt="bi0s Meetups App Logo"
+                        class="aspect-square w-[46px] rounded-none object-contain"
+                      />
+                      <div
+                        class="mt-12 max-md:mt-10 dark:text-white"
+                        role="contentinfo"
+                        tabindex="0"
+                      >
+                        An app to streamline organizing meetups for bi0s
+                        Meetups, helped in creating and managing meetups
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ml-5 flex w-[40%] flex-col max-md:ml-0 max-md:w-full"
+                  >
+                    <img
+                      loading="lazy"
+                      src="/static/images/bi0s-meetups/mobile-mockup.svg"
+                      alt="bi0s Meetups App Interface Screenshot"
+                      class="aspect-[1.53] w-full grow object-contain max-md:max-w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+            <div
+              class="flex w-full grow flex-col items-start rounded-xl bg-foreground py-7 pl-6 pr-20 text-2xl font-semibold tracking-tighter text-background max-md:mt-6 max-md:max-w-full max-md:px-5"
+              tabindex="0"
+            >
+              <div class="leading-8 max-md:max-w-full">
+                We discovered during the meetups that attendees appreciated a
+                centralized and professional platform for registrations.
+              </div>
+              <div
+                class="mt-60 font-serif text-6xl leading-none tracking-tighter text-[#7bffc7] dark:text-accent max-md:mt-10 max-md:text-4xl"
+                aria-label="Over 800 active users"
+              >
+                800+
+              </div>
+              <div class="mt-8 leading-none max-md:max-w-full">
+                Active users and engagement on our website.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-12 flex w-full flex-col overflow-hidden rounded-xl text-center font-mono font-semibold text-zinc-900 max-md:mt-10 max-md:max-w-full"
+      >
+        <div
+          class="flex w-full flex-col items-center rounded-lg rounded-b-none bg-[#7bffc7] px-80 py-12 max-md:max-w-full max-md:px-5"
+          tabindex="0"
+        >
+          <div
+            class="text-lg font-medium leading-none tracking-tighter max-md:max-w-full"
+          >
+            Recognizing this opportunity, we aimed to enhance the visual
+            identity of each meetup and asked
+          </div>
+          <div
+            class=" font-serif font-normal mt-12 min-h-[156px] w-[800px] max-w-[800px] pl-3 pr-3 text-5xl leading-[52px] tracking-tighter max-md:mt-10 max-md:max-w-full max-md:text-4xl max-md:leading-10"
+          >
+            How might we create unique, engaging themes to elevate the attendee
+            experience?
+          </div>
+        </div>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b47e7686f5cdef62403766259b0bc630e1e8d201385e7123b9d4781208ebeb9e?placeholderIfAbsent=true&apiKey=ee661ca2f4a0429c903e88b171d50fcc"
+          alt="Visual representation of meetup themes and attendee experience"
+          class="aspect-[2.8] w-full rounded-none object-contain max-md:max-w-full"
+        />
+      </div>
+      <div class="mt-16 flex w-[842px] max-w-full flex-col pb-12 max-md:mt-10">
+        <div
+          class="text-2xl font-semibold leading-none tracking-tighter text-foreground"
+          tabindex="0"
+        >
+          Finding the problem:
+        </div>
+        <div
+          class="mt-6 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
+          tabindex="0"
+        >
+          The challenge for organizing meetups effectively stemmed from the lack
+          of a centralized, professional, and user-friendly registration system.
+          Using tools like Google Forms was functional but lacked the
+          professional polish expected from India's #1 CTF and cybersecurity
+          research team. Additionally, relying on external tools meant less
+          control over the user data and experience, which could affect the
+          trust and perception of attendees.
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-10 max-md:max-w-full">
+        <div class="flex gap-1">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex min-h-[72px] flex-1 flex-col pl-7 max-md:max-w-full">
+            <div
+              class="text-sm font-semibold leading-none tracking-tighter text-foreground"
+              tabindex="0"
+            >
+              Centralized Management
+            </div>
+            <div
+              class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
+              tabindex="0"
+            >
+              Handling registrations, attendee lists, and updates through
+              multiple tools can cause friction and inefficiencies. A dedicated
+              platform can streamline these processes into a unified system.
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-1">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex min-h-[72px] flex-1 flex-col pl-7 max-md:max-w-full">
+            <div
+              class="text-sm font-semibold leading-none tracking-tighter text-foreground"
+              tabindex="0"
+            >
+              Professionalism
+            </div>
+            <div
+              class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
+              tabindex="0"
+            >
+              Using basic tools for registrations might give an impression of
+              unpreparedness. A professional website reflects the high standards
+              and capabilities of the team behind the event.
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-1">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex min-h-[72px] max-w-full flex-col pl-7">
+            <div
+              class="text-sm font-semibold leading-none tracking-tighter text-foreground"
+              tabindex="0"
+            >
+              Control and Ownership
+            </div>
+            <div
+              class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
+              tabindex="0"
+            >
+              External tools like Google Forms limit the control over user
+              experience, data handling, and branding. A custom solution would
+              provide complete ownership, ensuring a seamless, on-brand
+              experience for participants.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-sm mt-6 flex flex-col gap-4 leading-5 tracking-tighter text-foreground max-md:max-w-full"
+        tabindex="0"
+      >
+        <p>
+          So, we all agreed to keep the website&#39;s look consistent. It took
+          me almost a week to finish the design, set up the site, and pick the
+          content. Since this was my first big project, I&#39;m thinking of
+          writing a blog about the process and why I made those decisions.
+        </p>
+        <p>
+          The entire website got rewritten twice. At first, I used Astro, but
+          since it&#39;s a niche framework, I realized it might be hard for
+          others to manage the site later on. So, I switched to Next.js. This
+          was also the first site I created entirely from scratch, no templates
+          or themes used.
+        </p>
+        <p>
+          Apart from the awesome dynamic themes using CSS variables — check out <Link
+            href="https://bi0smeetup.in/meetups/8"
+            class="text-accent">https://bi0smeetup.in/meetups/8</Link
+          > and play around with the number 8, going down to 1 — and the custom shadcn
+          UI components that perfectly fit the site&#39;s theme, there&#39;s not
+          a lot more to say about the frontend.
+        </p>
+        <p>
+          So, the website is actually built using a full TypeScript stack. We
+          use Prisma and Neon PostgreSQL db for data storage, and Next Auth for
+          authentication. Our aim was to set up something like Luma but with
+          more control over our development. If you take a look at the user
+          experience flow, you&#39;ll see it&#39;s similar to Luma, and we did
+          borrow some of their UI too. And hey, if anyone from Luma is reading
+          this, you all made an awesome web app! However, because of our design
+          scheme, we had to start from scratch.
+        </p>
+        <div
+          class="text-2xl font-semibold leading-none tracking-tighter text-foreground"
+          tabindex="0"
+        >
+          Starting with data storage
+        </div>
+        <p>
+          Back when we didn&#39;t have authentication, we simply took form
+          responses and added them to Prisma. We relied on the <code
+            >useLocalStorage</code
+          > hook for state management. I realize this wasn&#39;t ideal as it impacted
+          everything. It was also inefficient because a user could forget they registered
+          for an event and try to register again from a different device. Since the
+          venue provider had limited seats, we had to opt for authentication.
+        </p>
+        <p>
+          So, I decided to go with React Hook Form and Zod for form validation
+          because they&#39;re super light and easy to use. Zod&#39;s validation
+          based on schemas is neat and lets me handle all validation in one
+          place, which I find better than dealing with it in each input field
+          separately.
+        </p>
+        <p>
+          I went with <code>useLocalStorageState</code> to check user registration.
+          It&#39;s a super handy hook for keeping state in sync with local storage,
+          even surviving page refreshes. This ensures users don&#39;t lose their
+          registration info if they accidentally refresh, a nice touch for user experience.
+        </p>
+        <p>
+          In hindsight, it turned out to be a bad idea. Users can&#39;t tell if
+          they registered from different devices, and without an expiry date,
+          the next meetup page might still show you as registered.
+        </p>
+        <p>
+          Working with various meetups, I utilized the URL slug to dynamically
+          load specific information for each event—such as fonts, colors, and
+          descriptions. This allows each event page to have its own unique style
+          while maintaining the site&#39;s consistency. Also, manually
+          hard-coding all meetups would have been cumbersome—it&#39;s much
+          easier to manage and scale this way.
+        </p>
+
+        <div
+          class="text-2xl font-semibold leading-none tracking-tighter text-foreground"
+          tabindex="0"
+        >
+          so what&#39;s next? Auth?
+        </div>
+        <p>
+          Let&#39;s talk about UX. I&#39;m not someone who delved into human
+          philosophy to grasp user experience, but having to fill out forms
+          every time during testing made me question its necessity. There was a
+          point when we debated the need for authentication on a meetup page
+          that simply displayed event information. However, we realized
+          authentication was essential for future paid workshops, setting a
+          strong foundation. Meetups will always remain free, but we aim to
+          provide workshop materials exclusively to attendees rather than making
+          them public—although with some website tinkering, you could still
+          access them.
+        </p>
+        <p>
+          The code is pretty much copied from the Next Auth docs website and
+          adjusted to include onboarding features that will be added later. We
+          plan to request users for their phone number, preferably WhatsApp, to
+          send an RSVP message via the bot. Also, we&#39;d like to collect
+          LinkedIn profiles to understand the industry and university
+          distribution of our users.
+        </p>
+        <div
+          class="text-2xl font-semibold leading-none tracking-tighter text-foreground"
+          tabindex="0"
+        >
+          stuff like emails and QR
+        </div>
+        <p>
+          We wanted to make signing up even easier by sending confirmation
+          emails right after users register. We used <strong>Resend</strong> with
+          <strong>React Email</strong> to send personalized emails. This gives users
+          instant confirmation and adds a nice touch to the experience.
+        </p>
+        <p>
+          Additionally, we came up with a cool idea for event management - a <strong
+            >QR code check-in system</strong
+          >. Users receive a unique QR code in their confirmation email,
+          allowing them to check in by simply scanning it at the event. This
+          speeds up the check-in process, makes it contactless, and helps us
+          keep track of attendance efficiently. By automating emails and using
+          QR codes, we&#39;re streamlining our processes and ensuring smooth
+          operations on event day.
+        </p>
+      </div>
+      <section
+        class="flex max-w-[842px] mt-8 flex-col text-sm tracking-tighter"
+        aria-labelledby="reflection-title"
+      >
+        <h2
+          id="reflection-title"
+          class="text-2xl font-semibold leading-none tracking-tighter text-foreground"
+        >
+          Reflection:
+        </h2>
+        <p class="mt-6 leading-5 text-foreground max-md:max-w-full">
+          Working on this website for bi0s Meetups has been so fulfilling.
+          I&#39;ve picked up a ton of new skills, from creating a system
+          that&#39;s both practical and visually appealing to handling data
+          storage and improving user experience with features like
+          authentication, emails, and QR code check-ins. It really made me
+          rethink how event registration and management should be done, and
+          I&#39;m really happy with the result. Each obstacle was a chance to
+          learn something fresh, whether it was about frontend design or backend
+          choices to ensure the platform can grow smoothly. I&#39;m really
+          looking forward to what&#39;s next and how this project will keep
+          evolving as our meetups expand! Reflecting on the process, I recognize
+          my growth as a designer and developer through these three key lessons:
+        </p>
+        <article
+          class="mt-6 flex w-full gap-2"
+        >
+        <div class="w-1 bg-accent"></div>
+        <div class="flex w-full flex-col items-start py-1 px-2 max-md:max-w-full max-md:pl-5">
+
+          <h3
+            class="text-sm font-semibold leading-none tracking-tighter text-foreground"
+          >
+            Mastering the art of creating unique experiences:
+          </h3>
+          <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
+            By designing distinct themes for every meetup, including unique
+            color schemes, font styles, and tailored graphics, I understood the
+            value of branding in fostering engagement. This practice not only
+            amplified the platform's visual appeal but also strengthened its
+            identity.
+          </p>
+          <p class="mt-2 leading-loose text-accent max-md:max-w-full">
+            I grew to appreciate the power of intentional design in creating
+            memorable user experiences.
+          </p>
+        </div>
+        </article>
+        <article
+          class="mt-6 flex w-full gap-2 "
+        >
+        <div class="w-1 bg-accent"></div>
+        <div class="flex w-full flex-col items-start py-1 px-2 max-md:max-w-full max-md:pl-5">
+
+          <h3
+            class="text-sm font-semibold leading-none tracking-tighter text-foreground"
+          >
+            Balancing creativity with functionality:
+          </h3>
+          <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
+            Developing a platform for seamless registration and information
+            sharing required striking a balance between aesthetics and
+            usability. I learned to prioritize functionality while ensuring the
+            platform retained its innovative and professional look.
+          </p>
+          <p
+            class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full"
+          >
+            I grew to merge creativity with practicality, crafting designs that
+            resonate with users.
+          </p>
+          </div>
+        </article>
+        <article
+          class="mt-6 flex w-full gap-2"
+        >
+        <div class="w-1 bg-accent"></div>
+        <div class="flex w-full flex-col items-start py-1 px-2 max-md:max-w-full max-md:pl-5">
+          <h3
+            class="text-sm font-semibold leading-none tracking-tighter text-foreground"
+          >
+            Scalability and adaptability:
+          </h3>
+          <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
+            Transforming a simple idea into a scalable platform that serves
+            hundreds of users demanded a deep understanding of flexibility and
+            growth. This experience honed my ability to design and develop
+            systems that adapt to evolving needs while maintaining consistency.
+          </p>
+          <p
+            class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full"
+          >
+            I grew to think long-term, creating solutions that sustain and scale
+            effortlessly.
+          </p>
+        </div>
+        </article>
+      </section>
+    </div>
+  </Container>
+</Layout>

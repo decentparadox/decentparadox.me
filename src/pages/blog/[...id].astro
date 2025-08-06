@@ -115,7 +115,18 @@ const tocSections = await getTOCSections(currentPostId)
           alt={post.data.title}
           width={1200}
           height={630}
-          class="col-span-full mx-auto w-full max-w-5xl object-cover"
+          class="col-span-full mx-auto w-full max-w-5xl object-cover dark:hidden"
+        />
+      )
+    }
+    {
+      post.data.darkimage && (
+        <Image
+          src={post.data.darkimage}
+          alt={post.data.title}
+          width={1200}
+          height={630}
+          class="col-span-full mx-auto w-full max-w-5xl object-cover hidden dark:block"
         />
       )
     }

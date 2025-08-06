@@ -1,28 +1,57 @@
----
-import { Separator } from '@/components/ui/separator'
-import { SOCIAL_LINKS } from '@/consts'
-import Link from './Link.astro'
-import SocialIcons from './SocialIcons.astro'
----
-
-<footer class="py-4">
-  <div
-    class="mx-auto flex max-w-3xl flex-col items-center justify-center gap-y-2 px-4 sm:flex-row sm:justify-between"
-  >
-    <div class="flex flex-wrap items-center justify-center gap-x-2 text-center">
-      <span class="text-muted-foreground text-sm">
-        &copy; {new Date().getFullYear()} All rights reserved.
-      </span>
-      <Separator orientation="vertical" className="hidden h-4! sm:block" />
-      <p class="text-muted-foreground text-sm">
-        Made with 🤍 by <Link
-          href="https://github.com/jktrn"
-          class="text-foreground"
-          external
-          underline>enscribe</Link
-        >!
-      </p>
+  <section class="flex w-full flex-col gap-16 pt-6 max-w-screen-xl mx-auto">
+    <div class="w-full">
+      <img 
+        src="/static/images/Footer.svg" 
+        alt="Footer" 
+        class="w-full h-full dark:hidden" 
+      />
+      <img 
+        src="/static/images/FooterDark.svg" 
+        alt="Footer" 
+        class="w-full h-full hidden dark:block" 
+      />
     </div>
-    <SocialIcons links={SOCIAL_LINKS} />
-  </div>
-</footer>
+
+    <!-- <div class="flex w-full flex-row-reverse justify-between">
+      <div class="flex h-4 items-center gap-4">
+        <a
+          href="https://amrita.town/prev"
+          class="text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
+        >
+          <div class="h-4 w-4 rotate-90 fill-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 100">
+              <path
+                d="M70.4,58.9L70.1,57l-0.2-0.9c0,0,0,0,0,0l-0.2-0.9c-18.7,3.4-27.6,13.4-31.9,22.7V3h-0.9H35h-0.9v75.3c-4.2-9.7-13.2-20.2-31.9-23.2L1.9,57L1.7,58c0,0,0,0,0,0l-0.1,0.9c28.7,4.5,32.2,27.6,32.5,35.3c-0.1,1.7,0,2.7,0,2.8l0.9-0.1v0l0.5,0l2.4,0.1c0,0,0-0.6,0-1.5v-2.5C38.4,84.4,42.5,63.9,70.4,58.9z"
+              ></path>
+            </svg>
+          </div>
+        </a>
+
+        <a
+          href="https://amrita.town/random"
+          class="fill-accent text-sm font-medium uppercase text-accent hover:brightness-125 dark:hover:brightness-125"
+        >
+          <Dices />
+        </a>
+
+        <a
+          href="https://amrita.town/next"
+          class="text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
+        >
+          <div class="h-4 w-4 -rotate-90 fill-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 100">
+              <path
+                d="M70.4,58.9L70.1,57l-0.2-0.9c0,0,0,0,0,0l-0.2-0.9c-18.7,3.4-27.6,13.4-31.9,22.7V3h-0.9H35h-0.9v75.3c-4.2-9.7-13.2-20.2-31.9-23.2L1.9,57L1.7,58c0,0,0,0,0,0l-0.1,0.9c28.7,4.5,32.2,27.6,32.5,35.3c-0.1,1.7,0,2.7,0,2.8l0.9-0.1v0l0.5,0l2.4,0.1c0,0,0-0.6,0-1.5v-2.5C38.4,84.4,42.5,63.9,70.4,58.9z"
+              ></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <a
+        href="https://amrita.town/"
+        class="h-full self-center text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
+      >
+        <p>Amrita.town</p>
+      </a>
+    </div> -->
+  </section>

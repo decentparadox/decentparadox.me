@@ -1,0 +1,70 @@
+---
+import MarqueeSection from '@/components/MarqueeSection.tsx'
+---
+
+<main
+  class="flex min-h-[calc(100vh-96px)] flex-col items-center justify-between md:items-start py-4"
+>
+  <div class="mt-8 w-full">
+    <MarqueeSection />
+    <div
+class="
+  lg:size-full hidden md:block
+  opacity-20 
+  transition-all duration-300
+"
+>
+<!-- Example: SVG, Image, or Animation -->
+<img
+  src="/static/images/engine.svg"
+  alt=""
+  class="object-contain absolute right-2 bottom-2 block dark:hidden"
+  loading="lazy"
+  draggable="false"
+/>
+<img
+  src="/static/images/engineDark.svg"
+  alt=""
+  class="object-contain absolute right-2 bottom-2 hidden dark:block"
+  loading="lazy"
+  draggable="false"
+/>
+</div>
+
+    <div class="flex h-auto w-full md:w-[85%] flex-col pt-12 z-10">
+      <h1 class="font-serif font-normal leading-tight text-[56px] lg:text-[92px] xl:text-[128px] z-10">Multi Disciplinary</h1>
+      <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
+        <h2 class="font-serifItalic font-normal leading-tight text-[56px] lg:text-[92px] xl:text-[128px] text-accent z-10">Developer</h2>
+        <p class="font-serif md:text-[20px] text-[20px] font-normal leading-tight text-foreground z-10">
+          A guy building tools and experiences at the cross-section of technology, lifestyle, and design.
+        </p>
+      </div>
+    </div>
+
+      
+  </div>
+  <!-- additional content comes here -->
+  <div class="relative w-full">
+    <div class="flex items-start justify-between">
+      <div class="flex flex-col gap-6">
+        <div
+          class="inline-flex w-fit items-center gap-1 rounded-sm bg-accent px-1.5 py-1.5"
+        >
+          <span class="font-supply text-xs font-normal text-background"
+            >Crafting ✦ Magic</span
+          >
+        </div>
+        <div class="max-w-[427px]">
+          <p class="font-sans text-base font-normal leading-normal">
+            <span class="text-foreground"
+              >I enjoy working with computers, whether it's making websites, building simple apps, designing games, and experimenting with whatever I find interesting.</span
+            >
+            <span class="text-foreground/75">
+              Also I Vibecode sometimes</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,66 @@
+---
+import Link from './Link.astro'
+---
+
+<div class="h-full w-full font-sans">
+  <div class="flex items-center justify-between pb-4 font-geist opacity-75">
+    <h2 class="text-accent font-serif">(Contact)</h2>
+    <a href="/guestbook" class="text-right text-accent font-serif"> (Sign my guestbook) </a>
+  </div>
+  <div class="flex  gap-6 flex-col-reverse md:flex-row items-end justify-between">
+    <div class="flex w-full h-full flex-col md:flex-row gap-4 justify-between mx-auto md:mx-0">
+      <div class="flex flex-col gap-2">
+        <span>If you wanna talk, hit me at <span class="font-serifItalic text-accent text-center md:text-left">hello@decentparadox.me</span></span>
+        <h2 class="text-accent font-serif opacity-75">(webring)</h2>
+        <div class="flex flex-row gap-2">
+          <Link href="https://amrita.town" class='text-accent'>
+            <p>Amrita.town</p>
+          </Link>
+          /
+          <Link href="https://amrita.town/prev" class='text-accent font-serif'>
+            <p>Previous</p>
+          </Link>
+          /
+          <Link href="https://amrita.town/random" class='text-accent font-serif'>
+            <p>Random</p>
+          </Link>
+          /
+          <Link href="https://amrita.town/next" class='text-accent font-serif'>
+            <p>Next</p>
+          </Link>
+        </div>
+    </div>
+      <div class="flex gap-8 flex-wrap justify-between">
+        <div class="flex flex-col gap-2">
+          <p class="font-serifItalic text-accent text-[24px]">Explore</p>
+          <Link href="/about">
+            <p>About</p>
+          </Link>
+          <Link href="/projects">
+            <p>Projects</p>
+          </Link>
+          <Link href="/blog">
+            <p>Blog</p>
+          </Link>
+          <Link href="/guestbook">
+            <p>Guestbook</p>
+          </Link>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-serifItalic text-accent text-[24px]">Socials</p>
+          <Link href="https://github.com/decentparadox">
+            <p>Github</p>
+          </Link>
+          <Link href="https://twitter.com/0xdecentparadox">
+            <p>Twitter</p>
+          </Link>
+
+          <p>Discord</p>
+          <Link href="https://t.me/decentparadox">
+            <p>Telegram</p>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
