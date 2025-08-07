@@ -1,47 +1,37 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
-import PageHead from '@/components/PageHead.astro'
-import ProjectCard from '@/components/ProjectCard.astro'
+import Container from '@/components/Container.astro'
+import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
-import { getAllProjects } from '@/lib/data-utils'
+import { getCollection } from 'astro:content'
 
-const projects = await getAllProjects()
 ---
 
-<Layout class="max-w-3xl">
-  <PageHead slot="head" title="About" />
-  <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
+<Layout title="About" description={SITE.DESCRIPTION}>
+  <Container class="flex flex-col gap-y-6">
+    <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
 
-  <section>
-    <div class="min-w-full">
-      <div class="prose mb-8">
-        <p class="mt-0">
-          astro-erudite is an opinionated, unstyled static blogging template
-          that prioritizes simplicity and performance, built with <Link
-            href="https://astro.build"
-            external
-            underline>Astro</Link
-          >, <Link href="https://tailwindcss.com" external underline
-            >Tailwind</Link
-          >, and <Link href="https://ui.shadcn.com" external underline
-            >shadcn/ui</Link
-          >. It provides a clean foundation for your content while being
-          extremely easy to customize.
+    <section>
+      <div class="min-w-full font-sans">
+        <h1 class="mb-4 font-serifItalic text-3xl text-accent">About me</h1>
+        <p class="prose-neutral mb-8 dark:prose-invert">
+          Hey, I'm Sasank Reddy, also known as "decentparadox." I'm currently a
+          student pursuing a degree in Computer Science with a focus on
+          Artificial Intelligence at Amrita School of Engineering, Bangalore.
+          During the day, I work as a graphic and UI/UX designer, and I've got
+          two years of experience under my belt. I'm also into tech stuff like
+          reverse engineering, game hacking, and web development. On weekends,
+          you'll find me diving into Capture The Flag (CTF) challenges.
         </p>
         <p>
-          To learn more about the philosophy behind this template, check out the
-          following blog post: <Link
-            href="/blog/the-state-of-static-blogs"
-            underline>The State of Static Blogs in 2024</Link
-          >.
+          I'm all about learning and growth. My goal is to become a versatile
+          problem solver, so I'm constantly improving my skills in areas like
+          blockchain, app development, machine learning, and networking. I
+          believe in being well-prepared before taking on any projects. When I'm
+          not busy with tech, I love reading books and manga. It's my way of
+          staying creative and inspired
         </p>
       </div>
-
-      <h2 class="mb-4 text-2xl font-medium">Example Projects Listing</h2>
-      <div class="flex flex-col gap-4">
-        {projects.map((project) => <ProjectCard project={project} />)}
-      </div>
-    </div>
-  </section>
+    </section>
+  </Container>
 </Layout>
