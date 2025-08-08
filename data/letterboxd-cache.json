@@ -1,0 +1,405 @@
+{
+  "lastUpdated": "2025-08-08T22:47:58.491Z",
+  "movies": [
+    {
+      "title": "Fight Club",
+      "year": "1999",
+      "rating": "5.0",
+      "watchedDate": "2025-03-18",
+      "link": "https://letterboxd.com/decentparadox/film/fight-club/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/5/6/8/51568-fight-club-0-600-0-900-crop.jpg?v=768b32dfa4"
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "year": "1994",
+      "rating": "5.0",
+      "watchedDate": "2025-03-22",
+      "link": "https://letterboxd.com/decentparadox/film/the-shawshank-redemption/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/7l/hn/46/uz/zGINvGjdlO6TJRu9wESQvWlOKVT-0-600-0-900-crop.jpg?v=8736d1c395"
+    },
+    {
+      "title": "Grafted",
+      "year": "2024",
+      "rating": "2.0",
+      "watchedDate": "2025-03-25",
+      "link": "https://letterboxd.com/decentparadox/film/grafted/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/8/5/9/2/0/1085920-grafted-0-600-0-900-crop.jpg?v=1d702e9eec"
+    },
+    {
+      "title": "Shutter Island",
+      "year": "2010",
+      "rating": "5.0",
+      "watchedDate": "2025-03-25",
+      "link": "https://letterboxd.com/decentparadox/film/shutter-island/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/5/4/0/9/45409-shutter-island-0-600-0-900-crop.jpg?v=85dd4c38e3"
+    },
+    {
+      "title": "Zodiac",
+      "year": "2007",
+      "rating": "5.0",
+      "watchedDate": "2025-03-25",
+      "link": "https://letterboxd.com/decentparadox/film/zodiac/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/58/tf/z6/gw/qKQIjErYaN149hZRP5Vgf8RoC7S-0-600-0-900-crop.jpg?v=72ee5db942"
+    },
+    {
+      "title": "Oldboy",
+      "year": "2003",
+      "rating": "5.0",
+      "watchedDate": "2025-03-26",
+      "link": "https://letterboxd.com/decentparadox/film/oldboy/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/4/5/4/51454-oldboy-0-600-0-900-crop.jpg?v=294dbcadef"
+    },
+    {
+      "title": "Taxi Driver",
+      "year": "1976",
+      "rating": "4.5",
+      "watchedDate": "2025-03-27",
+      "link": "https://letterboxd.com/decentparadox/film/taxi-driver/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/9/4/7/51947-taxi-driver-0-600-0-900-crop.jpg?v=3ae07cca2d"
+    },
+    {
+      "title": "La La Land",
+      "year": "2016",
+      "rating": "5.0",
+      "watchedDate": "2025-03-28",
+      "link": "https://letterboxd.com/decentparadox/film/la-la-land/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/0/3/4/4/240344-la-la-land-0-600-0-900-crop.jpg?v=053670ff84"
+    },
+    {
+      "title": "Adolescence",
+      "year": "2025",
+      "rating": "5.0",
+      "watchedDate": "2025-03-28",
+      "link": "https://letterboxd.com/decentparadox/film/adolescence-2025/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/3/2/6/8/2/8/1326828-adolescence-2025-0-600-0-900-crop.jpg?v=dde7c2d9f0"
+    },
+    {
+      "title": "Donnie Darko",
+      "year": "2001",
+      "rating": "5.0",
+      "watchedDate": "2025-04-13",
+      "link": "https://letterboxd.com/decentparadox/film/donnie-darko/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/ye/jq/f3/22/nmb4QhCRmdfNP6rgb81yUFgI83l-0-600-0-900-crop.jpg?v=caa3999c6f"
+    },
+    {
+      "title": "Y2K",
+      "year": "2024",
+      "rating": "2.0",
+      "watchedDate": "2025-04-14",
+      "link": "https://letterboxd.com/decentparadox/film/y2k-2024/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/8/6/2/5/7/986257-y2k-0-600-0-900-crop.jpg?v=f5b3bd7137"
+    },
+    {
+      "title": "Black Mirror: The National Anthem",
+      "year": "2011",
+      "rating": "2.0",
+      "watchedDate": "2025-04-16",
+      "link": "https://letterboxd.com/decentparadox/film/black-mirror-the-national-anthem/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/2/5/5/2/3/425523-the-national-anthem-0-600-0-900-crop.jpg?v=0e12235117"
+    },
+    {
+      "title": "Gargi",
+      "year": "2022",
+      "rating": "2.5",
+      "watchedDate": "2025-04-18",
+      "link": "https://letterboxd.com/decentparadox/film/gargi/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/8/7/6/4/1/9/876419-gargi-0-600-0-900-crop.jpg?v=4893cb8027"
+    },
+    {
+      "title": "Big Hero 6",
+      "year": "2014",
+      "rating": "5.0",
+      "watchedDate": "2025-04-18",
+      "link": "https://letterboxd.com/decentparadox/film/big-hero-6/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/hu/db/3b/mm/q6WZxPlic8hpKzCxnzWOFCCLQfo-0-600-0-900-crop.jpg?v=d5c2ad9fb4"
+    },
+    {
+      "title": "Dragon",
+      "year": "2025",
+      "rating": "3.5",
+      "watchedDate": "2025-04-24",
+      "link": "https://letterboxd.com/decentparadox/film/dragon-2025/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/5/6/8/0/5/1156805-dragon-2025-0-600-0-900-crop.jpg?v=f5814ef02a"
+    },
+    {
+      "title": "Court: State vs. A Nobody",
+      "year": "2025",
+      "rating": "5.0",
+      "watchedDate": "2025-04-25",
+      "link": "https://letterboxd.com/decentparadox/film/court-state-vs-a-nobody/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/3/0/3/6/3/9/1303639-court-state-vs-a-nobody-0-600-0-900-crop.jpg?v=c51b914a50"
+    },
+    {
+      "title": "HIT: The First Case",
+      "year": "2020",
+      "rating": "4.5",
+      "watchedDate": "2025-05-01",
+      "link": "https://letterboxd.com/decentparadox/film/hit-the-first-case/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/6/0/2/8/3/7/602837-hit-the-first-case-0-600-0-900-crop.jpg?v=2a40ea946c"
+    },
+    {
+      "title": "HIT: The 2nd Case",
+      "year": "2022",
+      "rating": "3.5",
+      "watchedDate": "2025-05-01",
+      "link": "https://letterboxd.com/decentparadox/film/hit-the-2nd-case/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/7/2/8/7/6/3/728763-hit-the-2nd-case-0-600-0-900-crop.jpg?v=c01c8f4b90"
+    },
+    {
+      "title": "HIT: The Third Case",
+      "year": "2025",
+      "rating": "4.0",
+      "watchedDate": "2025-05-01",
+      "link": "https://letterboxd.com/decentparadox/film/hit-the-third-case/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/5/6/1/9/8/956198-hit-the-third-case-0-600-0-900-crop.jpg?v=4101d9bc6f"
+    },
+    {
+      "title": "The Life List",
+      "year": "2025",
+      "rating": "4.5",
+      "watchedDate": "2025-05-03",
+      "link": "https://letterboxd.com/decentparadox/film/the-life-list/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/3/8/9/9/7/1138997-the-life-list-0-600-0-900-crop.jpg?v=3b86512154"
+    },
+    {
+      "title": "Casino",
+      "year": "1995",
+      "rating": "3.0",
+      "watchedDate": "2025-05-07",
+      "link": "https://letterboxd.com/decentparadox/film/casino/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/6p/om/dp/mc/casino-original-0-600-0-900-crop.jpg?v=4bb9a2596f"
+    },
+    {
+      "title": "Everything Everywhere All at Once",
+      "year": "2022",
+      "rating": "5.0",
+      "watchedDate": "2025-05-09",
+      "link": "https://letterboxd.com/decentparadox/film/everything-everywhere-all-at-once/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/4/4/7/4/474474-everything-everywhere-all-at-once-0-600-0-900-crop.jpg?v=281f1a041e"
+    },
+    {
+      "title": "Shershaah",
+      "year": "2021",
+      "rating": "5.0",
+      "watchedDate": "2025-05-17",
+      "link": "https://letterboxd.com/decentparadox/film/shershaah/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/2/7/4/3/4/527434-shershaah-0-600-0-900-crop.jpg?v=85dd0a0618"
+    },
+    {
+      "title": "The Handmaiden",
+      "year": "2016",
+      "rating": "4.0",
+      "watchedDate": "2025-05-17",
+      "link": "https://letterboxd.com/decentparadox/film/the-handmaiden/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/pc/n6/pz/mi/wvzfK5QR6dGLwND8MCzWjsQWG4Q-0-600-0-900-crop.jpg?v=bcfcc8f8f6"
+    },
+    {
+      "title": "Yamadonga",
+      "year": "2007",
+      "rating": "5.0",
+      "watchedDate": "2025-05-21",
+      "link": "https://letterboxd.com/decentparadox/film/yamadonga/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/6/3/5/0/6/63506-yamadonga-0-600-0-900-crop.jpg?v=b5868c4a86"
+    },
+    {
+      "title": "Unlocked",
+      "year": "2023",
+      "rating": "4.0",
+      "watchedDate": "2025-05-29",
+      "link": "https://letterboxd.com/decentparadox/film/unlocked-2023/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/6/6/2/4/2/4/662424-unlocked-0-600-0-900-crop.jpg?v=2d2716d6b8"
+    },
+    {
+      "title": "Khaleja",
+      "year": "2010",
+      "rating": "4.0",
+      "watchedDate": "2025-06-01",
+      "link": "https://letterboxd.com/decentparadox/film/khaleja/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/1/3/1/9131-khaleja-0-600-0-900-crop.jpg?v=b29707471d"
+    },
+    {
+      "title": "Retro",
+      "year": "2025",
+      "rating": "3.0",
+      "watchedDate": "2025-06-02",
+      "link": "https://letterboxd.com/decentparadox/film/retro-2025/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/4/9/9/0/7/1149907-retro-2025-0-600-0-900-crop.jpg?v=68d82b414c"
+    },
+    {
+      "title": "Jerry Maguire",
+      "year": "1996",
+      "rating": "4.0",
+      "watchedDate": "2025-06-05",
+      "link": "https://letterboxd.com/decentparadox/film/jerry-maguire/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/2/0/6/47206-jerry-maguire-0-600-0-900-crop.jpg?v=0f7ed523ed"
+    },
+    {
+      "title": "Jersey",
+      "year": "2019",
+      "rating": "5.0",
+      "watchedDate": "2025-06-06",
+      "link": "https://letterboxd.com/decentparadox/film/jersey/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/2/0/6/0/1/520601-jersey-0-600-0-900-crop.jpg?v=d8daac56aa"
+    },
+    {
+      "title": "Aashiqui 2",
+      "year": "2013",
+      "rating": "5.0",
+      "watchedDate": "2025-06-09",
+      "link": "https://letterboxd.com/decentparadox/film/aashiqui-2/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/3/8/5/2/8/138528-aashiqui-2-0-600-0-900-crop.jpg?v=cc3f0dcb66"
+    },
+    {
+      "title": "Catch Me If You Can",
+      "year": "2002",
+      "rating": "5.0",
+      "watchedDate": "2025-06-19",
+      "link": "https://letterboxd.com/decentparadox/film/catch-me-if-you-can-2002/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/4/8/4/51484-catch-me-if-you-can-0-600-0-900-crop.jpg?v=942d676423"
+    },
+    {
+      "title": "Final Destination",
+      "year": "2000",
+      "rating": "5.0",
+      "watchedDate": "2025-06-21",
+      "link": "https://letterboxd.com/decentparadox/film/final-destination/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/0/6/8/47068-final-destination-0-600-0-900-crop.jpg?v=cde2a9e624"
+    },
+    {
+      "title": "Final Destination 2",
+      "year": "2003",
+      "rating": "4.0",
+      "watchedDate": "2025-06-22",
+      "link": "https://letterboxd.com/decentparadox/film/final-destination-2/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/eh/sw/9a/g8/8joRaZ3wfcqIePImFJpgypQ71Jp-0-600-0-900-crop.jpg?v=4a3ad26442"
+    },
+    {
+      "title": "Final Destination 3",
+      "year": "2006",
+      "rating": "4.0",
+      "watchedDate": "2025-06-22",
+      "link": "https://letterboxd.com/decentparadox/film/final-destination-3/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/3/0/6/47306-final-destination-3-0-600-0-900-crop.jpg?v=c424e0bd0d"
+    },
+    {
+      "title": "The Final Destination",
+      "year": "2009",
+      "rating": "4.0",
+      "watchedDate": "2025-06-22",
+      "link": "https://letterboxd.com/decentparadox/film/the-final-destination/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/dm/oa/gw/qk/qQ6IvrEDe5OutlYs1xRQby9gcZE-0-600-0-900-crop.jpg?v=2b994df6a2"
+    },
+    {
+      "title": "Final Destination 5",
+      "year": "2011",
+      "rating": "3.5",
+      "watchedDate": "2025-06-22",
+      "link": "https://letterboxd.com/decentparadox/film/final-destination-5/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/0e/kp/hn/3l/nDzbtN56RXRJL4mpFZ3mdAW6so2-0-600-0-900-crop.jpg?v=356b9f312f"
+    },
+    {
+      "title": "Final Destination Bloodlines",
+      "year": "2025",
+      "rating": "5.0",
+      "watchedDate": "2025-06-24",
+      "link": "https://letterboxd.com/decentparadox/film/final-destination-bloodlines/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/0/2/6/2/2/502622-final-destination-bloodlines-0-600-0-900-crop.jpg?v=3c04d3a110"
+    },
+    {
+      "title": "28 Days Later",
+      "year": "2002",
+      "rating": "4.0",
+      "watchedDate": "2025-06-24",
+      "link": "https://letterboxd.com/decentparadox/film/28-days-later/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/qr/28/nz/3f/xaYdxi1PBEAYvqknvAmMPK5Eff3-0-600-0-900-crop.jpg?v=22d7237ed9"
+    },
+    {
+      "title": "28 Weeks Later",
+      "year": "2007",
+      "rating": "4.0",
+      "watchedDate": "2025-06-25",
+      "link": "https://letterboxd.com/decentparadox/film/28-weeks-later/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/0/9/7/2/50972-28-weeks-later-0-600-0-900-crop.jpg?v=811010e540"
+    },
+    {
+      "title": "The Amateur",
+      "year": "2025",
+      "rating": "5.0",
+      "watchedDate": "2025-06-25",
+      "link": "https://letterboxd.com/decentparadox/film/the-amateur-2025/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/8/0/9/1/4/980914-the-amateur-2025-0-600-0-900-crop.jpg?v=f9f2219f27"
+    },
+    {
+      "title": "John Wick",
+      "year": "2014",
+      "rating": "5.0",
+      "watchedDate": "2025-06-26",
+      "link": "https://letterboxd.com/decentparadox/film/john-wick/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/7/2/0/7/6/172076-john-wick-0-600-0-900-crop.jpg?v=e3c8c69b11"
+    },
+    {
+      "title": "John Wick: Chapter 2",
+      "year": "2017",
+      "rating": "4.0",
+      "watchedDate": "2025-06-26",
+      "link": "https://letterboxd.com/decentparadox/film/john-wick-chapter-2/",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/wb/rc/zd/o6/fWz9LMfdES80BsJKucgzI5ZJhnB-0-600-0-900-crop.jpg?v=d5d6ba1b6e"
+    },
+    {
+      "title": "John Wick: Chapter 3 – Parabellum",
+      "year": "2019",
+      "rating": "3.5",
+      "watchedDate": "2025-06-27",
+      "link": "https://letterboxd.com/decentparadox/film/john-wick-chapter-3-parabellum/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/3/9/0/0/3/9/390039-john-wick-chapter-3-parabellum-0-600-0-900-crop.jpg?v=589aeaad00"
+    },
+    {
+      "title": "John Wick: Chapter 4",
+      "year": "2023",
+      "rating": "4.0",
+      "watchedDate": "2025-06-27",
+      "link": "https://letterboxd.com/decentparadox/film/john-wick-chapter-4/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/3/0/8/8/2/530882-john-wick-chapter-4-0-600-0-900-crop.jpg?v=bc32219057"
+    },
+    {
+      "title": "Meiyazhagan",
+      "year": "2024",
+      "rating": "5.0",
+      "watchedDate": "2025-06-27",
+      "link": "https://letterboxd.com/decentparadox/film/meiyazhagan/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/2/4/2/2/9/1024229-meiyazhagan-0-600-0-900-crop.jpg?v=12411597ce"
+    },
+    {
+      "title": "Black Panther: Wakanda Forever",
+      "year": "2022",
+      "rating": "3.5",
+      "watchedDate": "2025-06-28",
+      "link": "https://letterboxd.com/decentparadox/film/black-panther-wakanda-forever/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/4/3/5/4/6/0/435460-black-panther-wakanda-forever-0-600-0-900-crop.jpg?v=27db1e3d45"
+    },
+    {
+      "title": "Manjummel Boys",
+      "year": "2024",
+      "rating": "5.0",
+      "watchedDate": "2025-07-31",
+      "link": "https://letterboxd.com/decentparadox/film/manjummel-boys/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/9/6/4/8/0/8/964808-manjummel-boys-0-600-0-900-crop.jpg?v=b58b986b31"
+    },
+    {
+      "title": "Challengers",
+      "year": "2024",
+      "rating": "3.0",
+      "watchedDate": "2025-08-04",
+      "link": "https://letterboxd.com/decentparadox/film/challengers/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/8/4/2/3/0/1/842301-challengers-0-600-0-900-crop.jpg?v=a7cd63cbef"
+    },
+    {
+      "title": "My Oxford Year",
+      "year": "2025",
+      "rating": "5.0",
+      "watchedDate": "2025-08-09",
+      "link": "https://letterboxd.com/decentparadox/film/my-oxford-year/",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/8/8/8/5/8/1188858-my-oxford-year-0-600-0-900-crop.jpg?v=8c1d460520"
+    }
+  ]
+}
