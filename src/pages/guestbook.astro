@@ -19,7 +19,7 @@ function sanitize(input: string) {
 
 if (
   req.method === 'POST' &&
-  req.headers.get('Content-Type') === 'application/x-www-form-urlencoded'
+  req.headers.get('Content-Type')?.includes('application/x-www-form-urlencoded')
 ) {
   const data = new URLSearchParams(await req.text())
   console.log('Searching for: ' + data)
@@ -60,6 +60,7 @@ console.log(result)
           <form
             id="guestbookForm"
             method="post"
+            enctype="application/x-www-form-urlencoded"
             class="card mb-4 grid w-full items-start gap-1 p-3"
           >
             <Input
