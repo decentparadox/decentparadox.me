@@ -41,10 +41,25 @@ const SpotifyPresence = () => {
   }, [])
 
   useEffect(() => {
-    fetch('/api/letterboxd.json')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fletterboxd.com%2Fdecentparadox%2Frss')
       .then((response) => response.json())
       .then((data) => {
-        setMovieData(data[0])
+        if (data.status === 'ok' && data.items.length > 0) {
+          const latestItem = data.items[0];
+          const titleMatch = latestItem.title.match(/^(.+?), (\d{4}) - (.+)$/);
+          
+          if (titleMatch) {
+            const movieData = {
+              title: titleMatch[1],
+              year: titleMatch[2],
+              rating: titleMatch[3],
+              watchedDate: latestItem.pubDate,
+              link: latestItem.link,
+              poster: latestItem.thumbnail || ''
+            };
+            setMovieData(movieData);
+          }
+        }
         setIsMovieLoading(false)
       })
       .catch((error) => {

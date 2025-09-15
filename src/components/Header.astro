@@ -3,21 +3,49 @@ import Container from '@/components/Container.astro'
 import Link from '@/components/Link.astro'
 import MobileMenu from '@/components/ui/mobile-menu'
 import ThemeToggle from '@/components/ThemeToggle.astro'
+import { LinearBlur } from "progressive-blur";
 ---
 
-<header class="sticky top-0 z-[99] w-full pt-4" style="--header-height: 4.5rem;" transition:persist>
+<header class="sticky top-0 z-[99] w-full pt-4 h-18" style="--header-height: 4.5rem;" transition:persist>
   <Container>
-    <div class="flex w-full flex-wrap items-center justify-between gap-4 py-4 text-[0.875rem] font-medium">
+    <LinearBlur
+  side="top"
+  steps={8}
+  strength={64}
+  falloffPercentage={100}
+  tint="var(--color-background)"
+  style={{
+        position: "absolute",
+        inset: 0,
+        zIndex: -1,
+        height: "5.5rem",
+      }}
+  client:load
+>
+</LinearBlur>
+    <div class="titleBar flex w-full flex-wrap items-center justify-between gap-4 px-4 py-4 text-[0.875rem] font-medium">
       <Link
         href="/"
-        class="flex flex-shrink-0 items-center gap-2 rounded-[0.4em] bg-accent px-2 py-1 font-supply text-background"
+        class="flex flex-shrink-0 items-center gap-2 rounded-[0.4em] py-1 font-supply text-background fill-foreground"
       >
-        Decent ✦ Paradox
+      <!-- Decent ✦ Paradox -->
+      <!-- <img src="/static/mascot.svg" alt="Logo" class="w-6 h-6" /> -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM9.27246 9.19629C10.3023 9.08805 11.3486 11.0039 11.6084 13.4756C11.8681 15.947 11.2436 18.038 10.2139 18.1465C9.18401 18.2547 8.13869 16.3389 7.87891 13.8672C7.6192 11.396 8.24291 9.30516 9.27246 9.19629ZM3.27246 9.19629C4.30232 9.08805 5.34862 11.0039 5.6084 13.4756C5.86809 15.947 5.24357 18.038 4.21387 18.1465C3.18401 18.2547 2.13869 16.3389 1.87891 13.8672C1.6192 11.396 2.24291 9.30516 3.27246 9.19629Z" fill="var(--color-accent)"/>
+        <defs>
+        <linearGradient id="paint0_linear_28_507" x1="12" y1="0" x2="12" y2="24" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white"/>
+        </linearGradient>
+        </defs>
+        </svg>
+        
       </Link>
       <div class="flex items-center gap-3 md:gap-4">
         <ThemeToggle transition:persist />
         <MobileMenu client:load transition:persist />
       </div>
     </div>
+
   </Container>
 </header>

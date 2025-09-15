@@ -13,7 +13,6 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@netlify/blobs": "^8.1.0",
     "@astrojs/check": "^0.9.4",
     "@astrojs/markdown-remark": "^6.3.1",
     "@astrojs/mdx": "^4.2.6",
@@ -25,6 +24,7 @@
     "@expressive-code/plugin-line-numbers": "^0.40.2",
     "@iconify-json/lucide": "^1.2.26",
     "@neondatabase/serverless": "^1.0.1",
+    "@netlify/blobs": "^8.1.0",
     "@phosphor-icons/react": "^2.1.10",
     "@radix-ui/react-hover-card": "^1.1.14",
     "@tailwindcss/vite": "^4.0.7",
@@ -36,7 +36,9 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
+    "motion": "^12.23.12",
     "patch-package": "^8.0.0",
+    "progressive-blur": "^1.0.0",
     "radix-ui": "^1.3.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",

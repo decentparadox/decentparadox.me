@@ -1,12 +1,14 @@
 ---
 import MarqueeSection from '@/components/MarqueeSection.tsx'
+import { TextAnimate } from '@/components/ui/text-animate.tsx'
+import type { Children } from 'react'
 ---
 
 <main
   class="flex min-h-[calc(100vh-96px)] flex-col items-center justify-between md:items-start py-4"
 >
   <div class="mt-8 w-full">
-    <MarqueeSection />
+    <!-- <MarqueeSection /> -->
     <div
 class="
   lg:size-full hidden md:block
@@ -32,12 +34,15 @@ class="
 </div>
 
     <div class="flex h-auto w-full md:w-[85%] flex-col pt-12 z-10">
-      <h1 class="font-serif font-normal leading-tight text-[56px] lg:text-[92px] xl:text-[128px] z-10">Multi Disciplinary</h1>
-      <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-        <h2 class="font-serifItalic font-normal leading-tight text-[56px] lg:text-[92px] xl:text-[128px] text-accent z-10">Developer</h2>
-        <p class="font-serif md:text-[20px] text-[20px] font-normal leading-tight text-foreground z-10">
-          A guy building tools and experiences at the cross-section of technology, lifestyle, and design.
-        </p>
+      <h1 class="font-instrument font-normal leading-tight text-[56px] md:text-[72px] lg:text-[92px] xl:text-[128px] z-10 text-accent">Sasank Reddy</h1>
+      <div class="gap-6 sm:items-center space-y-6">
+        <h2 class="font-sans font-normal leading-tight text-[14px] md:text-[18px] z-10 text-foreground/75">Developer ✦ Designer ✦ CTF Player</h2>
+        <div class="font-sans text-base font-normal max-w-[650px] leading-tight text-foreground z-10 space-y-2 flex gap-2 flex-col">
+          <p class='text-foreground/75'>
+            A guy building tools and experiences at the cross-section of technology, lifestyle, and design.
+          </p>
+          <TextAnimate className='text-prose' animation="blurInUp" by="word" once client:load value=`Hey, I’m Sasank Reddy. I enjoy designing, coding, and bringing ideas to life through little projects. I’m just a curious student who loves learning, tinkering with new concepts, and picking up skills as I go. I believe every small thing I build teaches me something new.` />
+        </div>
       </div>
     </div>
 
