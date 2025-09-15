@@ -22,7 +22,7 @@ import tailwindcss from '@tailwindcss/vite'
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  site: 'https://astro-erudite.vercel.app',
+  site: 'https://decentparadox.me',
 
   integrations: [
     expressiveCode({
