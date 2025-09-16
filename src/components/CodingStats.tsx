@@ -1,25 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
-
-interface Language {
-  name: string;
-  percent: number;
-  color: string;
-}
-
-interface WakatimeStats {
-  data: Language[];
-}
+import type { WakatimeStats, WakatimeLanguage } from '@/types';
 
 const CodingStats = () => {
-  const [languages, setLanguages] = useState<Language[]>([]);
+  const [languages, setLanguages] = useState<WakatimeLanguage[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchWakatimeStats = async () => {
       try {
-        const response = await fetch('https://wakatime.com/share/@decentparadox/4b7fa5d3-fda3-4287-8405-7525505fb30c.json');
+        const response = await fetch('/api/wakatime');
         const data: WakatimeStats = await response.json();
 
         // Get top 5 languages (excluding "Other" category)

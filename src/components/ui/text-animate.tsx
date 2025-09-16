@@ -319,7 +319,6 @@ const TextAnimateBase = ({
   const MotionComponent = motion.create(Component);
 
   let segments: string[] = [];
-  console.log(value)
   switch (by) {
     case "word":
       segments = value.toString().split(/(\s+)/);

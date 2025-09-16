@@ -40,13 +40,12 @@ if (
     INSERT INTO "Guestbook" ("name", "socialLink", "message", "isAnonymous", "createdAt")
     VALUES (${name}, ${url || null}, ${message}, ${anon}, ${timestamp});
   `
-    console.log(result)
   }
 }
 
 const result =
   await sql`SELECT * FROM "Guestbook" ORDER BY "Guestbook"."createdAt" DESC`
-console.log(result)
+
 ---
 
 <Layout title="Guestbook" description={SITE.DESCRIPTION}>

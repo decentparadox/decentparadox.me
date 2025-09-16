@@ -47,3 +47,13 @@ export type LetterboxdFeed = {
   description: string
   items: LetterboxdItem[]
 }
+
+export type WakatimeLanguage = {
+  name: string
+  percent: number
+  color: string
+}
+
+export type WakatimeStats = {
+  data: WakatimeLanguage[]
+}

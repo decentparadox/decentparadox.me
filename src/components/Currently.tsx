@@ -92,7 +92,6 @@ const SpotifyPresence = () => {
     image: image[3]['#text'],
     url: url,
   };
-  console.log(track)
   return (
 <div className="flex flex-1 flex-col gap-4">
       <span>
