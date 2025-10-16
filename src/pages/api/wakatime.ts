@@ -1,6 +1,8 @@
 import type { APIContext } from 'astro'
 import type { WakatimeStats } from '@/types'
 
+export const prerender = false
+
 export async function GET(context: APIContext) {
   try {
     // The Wakatime stats URL provided by the user
