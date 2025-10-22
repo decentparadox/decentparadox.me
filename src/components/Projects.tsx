@@ -88,10 +88,10 @@ const Home = () => {
             year="2024"
           />
           <ProjectItem
-            name="Orca"
-            imageSrc="orca.png"
-            link="orca"
-            desc="Astro integration for Graphic Designers"
+            name="Tethra"
+            imageSrc="tethra.png"
+            link="tethra"
+            desc="Local AI Desktop app"
             year="2024"
           />
         </div>
