@@ -74,6 +74,13 @@ const Home = () => {
             year="2024"
           />
           <ProjectItem
+            name="Tethra"
+            imageSrc="tethra.png"
+            link="tethra"
+            desc="Local AI Desktop app"
+            year="2024"
+          />
+          <ProjectItem
             name="Kalser"
             imageSrc="kalser.png"
             link="kalser"
@@ -85,13 +92,6 @@ const Home = () => {
             imageSrc="piratedPixels.png"
             link="piratedpixels"
             desc="CTF platform on TUI"
-            year="2024"
-          />
-          <ProjectItem
-            name="Tethra"
-            imageSrc="tethra.png"
-            link="tethra"
-            desc="Local AI Desktop app"
             year="2024"
           />
         </div>
