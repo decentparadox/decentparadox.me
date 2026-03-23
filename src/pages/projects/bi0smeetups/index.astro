@@ -61,22 +61,23 @@ import Layout from '@/layouts/Layout.astro'
           <div
             class="mr-20 text-2xl leading-8 tracking-tighter text-foreground max-md:mr-2.5 max-md:max-w-full"
           >
-            A dynamic platform to organize and promote monthly cybersecurity
-            meetups for India's #1 CTF and Cybersecurity Research Team.
+            A platform built to run bi0s's monthly cybersecurity meetups —
+            RSVPs, event info, and a unique look for each one.
           </div>
           <div class="mr-16 mt-7 leading-5 max-md:mr-2.5 max-md:max-w-full">
             
-            bi0s meetups point conveniently provides the organizers & attendees
-            with an active platform through which such a monthly cybersecurity
-            event would be effectively managed. Since this website will be
-            producing new pages for every meetup, the design scheme should
-            accommodate the theme of the desired meetup and fully functional as
-            well.
+            bi0s runs monthly cybersecurity meetups, and before this, organizing
+            them meant juggling Google Forms, scattered announcements, and a lot
+            of manual work. I built this so the team and attendees had one
+            proper place to handle it all. Each meetup gets its own page with a
+            distinct look, so the design had to be flexible enough to pull off
+            completely different vibes every month without feeling like a
+            different site.
             <br />
             <br />
-            The platform unites the information about the event, rsvp function, and
-            the convenient and appealing designs to build professional and user-friendly
-            space for cybersecurity communities.
+            The site brings together event info, an RSVP flow, and custom themes for
+            each meetup — all in a package that actually looks like it was built by
+            people who care.
           
           </div>
           <ul
@@ -84,18 +85,18 @@ import Layout from '@/layouts/Layout.astro'
           >
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
-              Solely responsible for the design, development, and branding assets,
-              including posters and brochures used for marketing.
+              Handled everything myself — design, development, and the branding
+              materials like posters and brochures for each meetup.
             </li>
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
-              Designed and developed a meetups app to facilitate the creation of
-              new meetups and enable organizers to view registered users effortlessly.
+              Built an admin app so organizers could create new meetups and check
+              who'd registered without digging through spreadsheets.
             </li>
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
-              Focused on providing a seamless user experience while maintaining a
-              professional and visually consistent brand identity.
+              Cared a lot about how it felt to use, not just how it looked —
+              every flow had to work for someone who'd never seen the site before.
             </li>
           </ul>
         </div>
@@ -159,8 +160,8 @@ import Layout from '@/layouts/Layout.astro'
                         role="contentinfo"
                         tabindex="0"
                       >
-                        An app to streamline organizing meetups for bi0s
-                        Meetups, helped in creating and managing meetups
+                        An app for organizing bi0s meetups — create events,
+                        track registrations, and see who's coming.
                       </div>
                     </div>
                   </div>
@@ -184,8 +185,8 @@ import Layout from '@/layouts/Layout.astro'
               tabindex="0"
             >
               <div class="leading-8 max-md:max-w-full">
-                We discovered during the meetups that attendees appreciated a
-                centralized and professional platform for registrations.
+                Attendees kept telling us they wanted a real platform for
+                registrations — not just a form link dropped in a chat.
               </div>
               <div
                 class="mt-60 font-serif text-6xl leading-none tracking-tighter text-[#7bffc7] dark:text-accent max-md:mt-10 max-md:text-4xl"
@@ -210,14 +211,14 @@ import Layout from '@/layouts/Layout.astro'
           <div
             class="text-lg font-medium leading-none tracking-tighter max-md:max-w-full"
           >
-            Recognizing this opportunity, we aimed to enhance the visual
-            identity of each meetup and asked
+            That got us thinking about how each meetup looked and felt, and
+            raised the question:
           </div>
           <div
             class=" font-serif font-normal mt-12 min-h-[156px] w-[800px] max-w-[800px] pl-3 pr-3 text-5xl leading-[52px] tracking-tighter max-md:mt-10 max-md:max-w-full max-md:text-4xl max-md:leading-10"
           >
-            How might we create unique, engaging themes to elevate the attendee
-            experience?
+            How might we give each meetup its own identity without rebuilding
+            the whole thing from scratch?
           </div>
         </div>
         <img
@@ -261,9 +262,9 @@ import Layout from '@/layouts/Layout.astro'
               class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
               tabindex="0"
             >
-              Handling registrations, attendee lists, and updates through
-              multiple tools can cause friction and inefficiencies. A dedicated
-              platform can streamline these processes into a unified system.
+              When registrations live in Google Forms, updates go out on
+              WhatsApp, and attendee lists are in a spreadsheet — things slip
+              through the cracks. One place for all of it just makes more sense.
             </div>
           </div>
         </div>
@@ -280,9 +281,9 @@ import Layout from '@/layouts/Layout.astro'
               class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
               tabindex="0"
             >
-              Using basic tools for registrations might give an impression of
-              unpreparedness. A professional website reflects the high standards
-              and capabilities of the team behind the event.
+              bi0s is India's #1 CTF team. Sending people a Google Form link
+              doesn't really match that. The platform needed to feel like it was
+              built by people who actually care about what they're making.
             </div>
           </div>
         </div>
@@ -299,10 +300,10 @@ import Layout from '@/layouts/Layout.astro'
               class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
               tabindex="0"
             >
-              External tools like Google Forms limit the control over user
-              experience, data handling, and branding. A custom solution would
-              provide complete ownership, ensuring a seamless, on-brand
-              experience for participants.
+              With third-party tools, you're stuck with their UI, their data
+              policies, their everything. Building it ourselves meant we could
+              brand it properly, own the data, and actually fix things when they
+              broke.
             </div>
           </div>
         </div>
@@ -428,9 +429,8 @@ import Layout from '@/layouts/Layout.astro'
           >. Users receive a unique QR code in their confirmation email,
           allowing them to check in by simply scanning it at the event. This
           speeds up the check-in process, makes it contactless, and helps us
-          keep track of attendance efficiently. By automating emails and using
-          QR codes, we&#39;re streamlining our processes and ensuring smooth
-          operations on event day.
+          keep track of attendance efficiently. Automating emails and using QR
+          codes for check-in just makes event day a lot less stressful.
         </p>
       </div>
       <section
@@ -454,8 +454,8 @@ import Layout from '@/layouts/Layout.astro'
           learn something fresh, whether it was about frontend design or backend
           choices to ensure the platform can grow smoothly. I&#39;m really
           looking forward to what&#39;s next and how this project will keep
-          evolving as our meetups expand! Reflecting on the process, I recognize
-          my growth as a designer and developer through these three key lessons:
+          evolving as our meetups expand! Looking back, here are three things
+          that actually stuck with me:
         </p>
         <article
           class="mt-6 flex w-full gap-2"
@@ -466,18 +466,17 @@ import Layout from '@/layouts/Layout.astro'
           <h3
             class="text-sm font-semibold leading-none tracking-tighter text-foreground"
           >
-            Mastering the art of creating unique experiences:
+            Designing something distinct, eight times in a row:
           </h3>
           <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
-            By designing distinct themes for every meetup, including unique
-            color schemes, font styles, and tailored graphics, I understood the
-            value of branding in fostering engagement. This practice not only
-            amplified the platform's visual appeal but also strengthened its
-            identity.
+            Each meetup got its own color palette, fonts, and custom graphics.
+            Doing this eight times taught me what makes something feel distinct
+            without just being loud about it. Good branding isn't about being
+            pretty — it's about feeling right for the moment.
           </p>
           <p class="mt-2 leading-loose text-accent max-md:max-w-full">
-            I grew to appreciate the power of intentional design in creating
-            memorable user experiences.
+            Even small visual decisions — like font weight or spacing — end up
+            changing how something feels to use.
           </p>
         </div>
         </article>
@@ -490,19 +489,19 @@ import Layout from '@/layouts/Layout.astro'
           <h3
             class="text-sm font-semibold leading-none tracking-tighter text-foreground"
           >
-            Balancing creativity with functionality:
+            When the design fights the product:
           </h3>
           <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
-            Developing a platform for seamless registration and information
-            sharing required striking a balance between aesthetics and
-            usability. I learned to prioritize functionality while ensuring the
-            platform retained its innovative and professional look.
+            I went deep on visuals early on and kept hitting moments where what
+            looked great just didn't work. The form was confusing. The button
+            placement was off. I had to learn to test how things actually felt
+            to use, not just how they looked in Figma.
           </p>
           <p
             class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full"
           >
-            I grew to merge creativity with practicality, crafting designs that
-            resonate with users.
+            If people can't figure out how to RSVP, it doesn't matter how nice
+            the page looks.
           </p>
           </div>
         </article>
@@ -514,19 +513,20 @@ import Layout from '@/layouts/Layout.astro'
           <h3
             class="text-sm font-semibold leading-none tracking-tighter text-foreground"
           >
-            Scalability and adaptability:
+            Building for more than right now:
           </h3>
           <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
-            Transforming a simple idea into a scalable platform that serves
-            hundreds of users demanded a deep understanding of flexibility and
-            growth. This experience honed my ability to design and develop
-            systems that adapt to evolving needs while maintaining consistency.
+            What started as a single meetup page turned into a system handling
+            eight events and 800+ users. I didn't plan for that scale upfront,
+            and some parts of the code made that obvious. It pushed me to think
+            beyond the next meetup — not over-engineer things, just leave more
+            room to grow.
           </p>
           <p
             class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full"
           >
-            I grew to think long-term, creating solutions that sustain and scale
-            effortlessly.
+            I started asking "what happens at 2x this, 5x this?" before writing
+            a single line.
           </p>
         </div>
         </article>
