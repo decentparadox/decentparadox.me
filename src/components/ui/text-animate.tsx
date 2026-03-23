@@ -321,7 +321,7 @@ const TextAnimateBase = ({
   let segments: string[] = [];
   switch (by) {
     case "word":
-      segments = value.toString().split(/(\s+)/);
+      segments = value.toString().trim().split(/\s+/);
       break;
     case "character":
       segments = value.toString().split("");
@@ -380,6 +380,8 @@ const TextAnimateBase = ({
         }
       : { container: defaultContainerVariants, item: defaultItemVariants };
 
+  const containerWhitespace = by === "line" ? "whitespace-pre-wrap" : "whitespace-normal";
+
   return (
     <AnimatePresence mode="popLayout">
       <MotionComponent
@@ -388,26 +390,25 @@ const TextAnimateBase = ({
         whileInView={startOnView ? "show" : undefined}
         animate={startOnView ? undefined : "show"}
         exit="exit"
-        className={cn("whitespace-pre-wrap", className)}
+        className={cn(containerWhitespace, className)}
         viewport={{ once }}
         aria-label={accessible ? value : undefined}
         {...props}
       >
         {accessible && <span className="sr-only">{value}</span>}
         {segments.map((segment, i) => (
-          <motion.span
-            key={`${by}-${segment}-${i}`}
-            variants={finalVariants.item}
-            custom={i * staggerTimings[by]}
-            className={cn(
-              by === "line" ? "block" : "inline-block whitespace-pre",
-              by === "character" && "",
-              segmentClassName,
-            )}
-            aria-hidden={accessible ? true : undefined}
-          >
-            {segment}
-          </motion.span>
+          <span key={`${by}-wrapper-${segment}-${i}`} className="inline">
+            <motion.span
+              key={`${by}-${segment}-${i}`}
+              variants={finalVariants.item}
+              custom={i * staggerTimings[by]}
+              className={cn(by === "line" ? "block" : "inline-block", segmentClassName)}
+              aria-hidden={accessible ? true : undefined}
+            >
+              {segment}
+            </motion.span>
+            {by === "word" && i !== segments.length - 1 && " "}
+          </span>
         ))}
       </MotionComponent>
     </AnimatePresence>

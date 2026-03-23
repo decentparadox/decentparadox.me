@@ -24,7 +24,7 @@ const blog = (await getCollection('blog'))
       <About />
     </section>
     <section>
-      <Projects client:load />
+      <Projects client:load showDeco={true} />
     </section>
     <section class="flex flex-col gap-y-4 font-sans">
       <div class="flex items-center justify-between font-geist opacity-75">

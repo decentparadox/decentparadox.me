@@ -12,7 +12,7 @@ import type { Children } from 'react'
     <div
 class="
   lg:size-full hidden md:block
-  opacity-20 
+  opacity-45
   transition-all duration-300
 "
 >
@@ -38,10 +38,14 @@ class="
       <div class="gap-6 sm:items-center space-y-6">
         <h2 class="font-sans font-normal leading-tight text-[14px] md:text-[18px] z-10 text-foreground/75">Developer ✦ Designer</h2>
         <div class="font-sans text-base font-normal max-w-[650px] leading-tight text-foreground z-10 space-y-2 flex gap-2 flex-col">
-          <p class='text-foreground/75'>
-            A guy building tools and experiences at the cross-section of technology, lifestyle, and design.
-          </p>
-          <TextAnimate className='text-prose' animation="blurInUp" by="word" once client:load value=`Hey, I’m Sasank Reddy. I enjoy designing, coding, and bringing ideas to life through little projects. I believe every small thing I build teaches me something new.` />
+          <TextAnimate
+            className="text-prose text-foreground/75"
+            animation="blurInUp"
+            by="word"
+            once
+            client:load
+            value={`A guy building tools and experiences at the cross-section of technology, lifestyle, and design.`}
+          />
         </div>
       </div>
     </div>

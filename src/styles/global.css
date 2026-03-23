@@ -13,6 +13,7 @@
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-serifItalic: PPEditorialItalic, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-geistPixel: GeistPixelGrid, ui-monospace, monospace;
   --font-instrument: InstrumentSerif, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-instrumentItalic: InstrumentSerifItalic, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
@@ -44,6 +45,44 @@
 
 
 
+@keyframes simmerGlow {
+  0% {
+    filter: blur(14px) brightness(0.7) saturate(0.8);
+    opacity: 0.6;
+  }
+  25% {
+    filter: blur(16px) brightness(1.0) saturate(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    filter: blur(18px) brightness(1.3) saturate(1.4);
+    opacity: 1.0;
+  }
+  75% {
+    filter: blur(16px) brightness(1.0) saturate(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    filter: blur(14px) brightness(0.7) saturate(0.8);
+    opacity: 0.6;
+  }
+}
+
+@keyframes simmerParticles {
+  0% {
+    filter: blur(6px) brightness(0.5) contrast(1.2);
+    transform: scale(0.95);
+  }
+  50% {
+    filter: blur(10px) brightness(1.5) contrast(1.8);
+    transform: scale(1.05);
+  }
+  100% {
+    filter: blur(6px) brightness(0.5) contrast(1.2);
+    transform: scale(0.95);
+  }
+}
+
 @font-face {
   font-family: "supply-mono";
   src: url("/fonts/supply-mono/PPSupplyMono-Bold.ttf") format("truetype");
@@ -72,6 +111,14 @@
   font-family: "supply-mono";
   src: url("/fonts/supply-mono/PPSupplyMono-Ultralight.ttf") format("truetype");
   font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeistPixelGrid";
+  src: url("/fonts/GeistPixel-Grid.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

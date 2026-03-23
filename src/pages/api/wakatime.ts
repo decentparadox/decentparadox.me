@@ -3,25 +3,60 @@ import type { WakatimeStats } from '@/types'
 
 export const prerender = false
 
-export async function GET(context: APIContext) {
+export async function GET(_context: APIContext) {
   try {
-    // The Wakatime stats URL provided by the user
-    const statsUrl = 'https://wakatime.com/share/@decentparadox/59d98eab-ad0d-4f50-9d5f-66870f61da76.json'
-
-    // Fetch the Wakatime stats
-    const response = await fetch(statsUrl)
-    if (!response.ok) {
-      throw new Error(`Failed to fetch Wakatime stats: ${response.status}`)
+    const apiKey = import.meta.env.WAKATIME_API_KEY
+    if (!apiKey) {
+      return new Response(
+        JSON.stringify({ error: 'Missing WAKATIME_API_KEY on server' }),
+        {
+          status: 500,
+          headers: { 'Content-Type': 'application/json' },
+        },
+      )
     }
 
-    const stats: WakatimeStats = await response.json()
+    const response = await fetch(
+      'https://wakatime.com/api/v1/users/current/stats/all_time',
+      {
+        headers: {
+          Authorization: `Basic ${Buffer.from(apiKey).toString('base64')}`,
+        },
+        cache: 'no-store',
+      },
+    )
 
-    // Return the stats data as JSON
-    return new Response(JSON.stringify(stats), {
+    if (!response.ok) {
+      throw new Error(`Failed to fetch WakaTime stats: ${response.status}`)
+    }
+
+    const stats = (await response.json()) as {
+      data?: {
+        languages?: Array<{
+          name: string
+          percent: number
+          total_seconds: number
+          color?: string
+        }>
+      }
+    }
+
+    const languages =
+      stats.data?.languages
+        ?.map(lang => ({
+          name: lang.name,
+          percent: lang.percent ?? 0,
+          color: lang.color ?? '#888888',
+        }))
+        .sort((a, b) => b.percent - a.percent) ?? []
+
+    const payload: WakatimeStats = { data: languages }
+
+    return new Response(JSON.stringify(payload), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
+        'Cache-Control': 'no-store',
       },
     })
   } catch (error) {

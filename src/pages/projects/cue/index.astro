@@ -1,0 +1,549 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Container from '@/components/Container.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout>
+  <Container class="flex grow flex-col gap-y-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Projects', href: '/projects', icon: 'lucide:archive' },
+        {
+          label: 'Cue',
+          href: '/projects/cue',
+          icon: 'lucide:sticky-note',
+        },
+      ]}
+    />
+
+    <div class="flex flex-col rounded-none pt-10 font-sans" role="main">
+      <div class="flex flex-wrap justify-between gap-5 max-md:max-w-full">
+        <div class="flex flex-col max-md:max-w-full">
+          <h1 class="self-start font-serifItalic text-5xl leading-none tracking-tighter text-accent max-md:text-4xl">
+            Cue
+          </h1>
+          <div class="mt-5 text-lg font-medium leading-tight tracking-tighter text-foreground max-md:max-w-full">
+            A native iOS AI assistant powered by Apple Intelligence, with
+            persistent memory and an extensible skill system — no setup, no cloud
+          </div>
+        </div>
+        <div class="flex w-full items-center justify-between gap-2 self-start text-right text-sm leading-loose tracking-tighter text-accent md:w-auto md:flex-col">
+          <div>iOS Dev, Swift, AI</div>
+          <div class="self-end">2025–2026</div>
+        </div>
+      </div>
+
+      <img
+        loading="lazy"
+        src="/static/images/cue/home.png"
+        alt="Cue hero"
+        class="mt-8 w-full rounded-xl object-cover"
+      />
+
+      <div class="mt-11 flex w-full items-center justify-between gap-10 max-md:mt-10 max-md:max-w-full max-md:flex-wrap">
+        <div class="my-auto flex w-[925px] min-w-[240px] flex-col self-stretch pt-2 text-sm leading-loose tracking-tighter text-foreground max-md:max-w-full">
+          <div class="mr-20 text-2xl leading-8 tracking-tighter text-foreground max-md:mr-2.5 max-md:max-w-full">
+            A port of the ZeroClaw agentic framework to iOS — built entirely
+            in Swift, running on-device via Apple's Foundation Models, with
+            no account and no mandatory network calls.
+          </div>
+          <div class="mr-16 mt-7 leading-5 max-md:mr-2.5 max-md:max-w-full">
+            I use ZeroClaw on my laptop pretty much every day. It's an agentic
+            framework with persistent memory, a skill system, and tool-calling
+            built around whatever model you point it at. The frustrating part
+            was that none of that existed on iOS. Every mobile AI app is just
+            a chat interface that forgets everything when you close it.
+            <br /><br />
+            Cue was built to fix that. It's a full port of the ZeroClaw runtime to
+            Swift — same memory file format, same skill dispatch model, same agent
+            loop — but running natively on iPhone using Apple's on-device Foundation
+            Models. You open the app and you're immediately talking to an assistant
+            that already knows who you are and what you were working on.
+          </div>
+          <ul class="mt-6 list-none space-y-3 pl-4 max-md:max-w-full max-md:pl-4">
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              Rebuilt the ZeroClaw agent loop as a Swift actor using async/await
+              and structured concurrency — same loop that runs on desktop, now
+              running on-device on iOS 18
+            </li>
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              Full memory system: soul.md, memory.md, and agents.md in the same
+              flat-file format as ZeroClaw, indexed with SQLite via GRDB
+            </li>
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              Skill system with bundled integrations for Calendar, Reminders,
+              Files, Clipboard, and web search using iOS-native APIs
+            </li>
+            <li class="flex gap-2">
+              <div class="w-1 bg-accent"></div>
+              External provider support (OpenAI, Anthropic, Groq) as optional
+              BYOK fallbacks when you want a more capable model
+            </li>
+          </ul>
+        </div>
+        <div class="my-auto flex w-[408px] min-w-[240px] flex-col items-start self-stretch py-0.5 pr-14 text-sm font-semibold leading-5 tracking-tighter text-foreground">
+          <h2 class="leading-none">Contribution</h2>
+          <div class="mt-3 text-sm tracking-tighter text-foreground">
+            iOS Architecture, Swift/SwiftUI,<br />
+            Agent Runtime, Skill System
+          </div>
+          <div class="mt-4 text-sm tracking-tighter text-foreground">
+            Memory System, Provider Abstraction, Security Policy
+          </div>
+          <h2 class="mt-10 leading-none">Stack</h2>
+          <div class="mt-3 text-sm tracking-tighter text-foreground">
+            Swift 6, SwiftUI, Apple Foundation Models<br />
+            GRDB (SQLite), EventKit, FileManager<br />
+            AppIntents, Keychain, URLSession
+          </div>
+          <h2 class="mt-10 leading-none">Platform</h2>
+          <div class="mt-3 text-sm tracking-tighter text-foreground">
+            iOS 18+ · iPhone 15 Pro or later<br />
+            (Apple Intelligence for local inference)
+          </div>
+          <h2 class="mt-16 leading-none max-md:mt-10">Duration</h2>
+          <div class="z-10 mt-3.5 w-60 text-sm tracking-tighter text-foreground">
+            Architecture & Design: 2 weeks<br />
+            Agent Runtime: 4 weeks<br />
+            Skills & Memory: 3 weeks<br />
+            Ongoing
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col rounded-none font-sans">
+      <div class="w-full max-md:max-w-full">
+        <div class="flex gap-5 max-md:flex-col">
+
+          <!-- ARCHITECTURE -->
+          <div class="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+            <div class="arch-card" tabindex="0" aria-label="Cue runtime architecture">
+              <div class="arch-header">
+                <span class="arch-file">AgentActor.swift</span>
+              </div>
+              <div class="arch-rows">
+                <div class="arch-row row-1">
+                  <div class="row-bar"></div>
+                  <div class="row-body">
+                    <span class="row-name">AgentActor</span>
+                    <span class="row-role">main loop</span>
+                  </div>
+                </div>
+                <div class="arch-row row-2">
+                  <div class="row-bar"></div>
+                  <div class="row-body">
+                    <span class="row-name">CueDispatcher</span>
+                    <span class="row-role">tool routing</span>
+                  </div>
+                </div>
+                <div class="arch-row row-3">
+                  <div class="row-bar"></div>
+                  <div class="row-body">
+                    <span class="row-name">MemoryManager</span>
+                    <span class="row-role">soul · memory · agents</span>
+                  </div>
+                </div>
+                <div class="arch-row row-4">
+                  <div class="row-bar"></div>
+                  <div class="row-body">
+                    <span class="row-name">SkillRegistry</span>
+                    <span class="row-role">calendar · files · web</span>
+                  </div>
+                </div>
+                <div class="arch-row row-5">
+                  <div class="row-bar"></div>
+                  <div class="row-body">
+                    <span class="row-name">InferenceProvider</span>
+                    <span class="row-role">apple · openai · anthropic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STAT CARD -->
+          <div class="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
+            <div class="flex w-full grow flex-col items-start rounded-xl bg-foreground py-7 pl-6 pr-20 text-2xl font-semibold tracking-tighter text-background max-md:mt-6 max-md:max-w-full max-md:px-5" tabindex="0">
+              <div class="leading-8 max-md:max-w-full">
+                Every mobile AI app is just a chat window. Cue is an agent
+                with memory that runs entirely on your device.
+              </div>
+              <div class="mt-60 font-serif text-6xl leading-none tracking-tighter text-[#8566FF] dark:text-accent max-md:mt-10 max-md:text-4xl" aria-label="Zero seconds setup time">
+                0s
+              </div>
+              <div class="mt-8 leading-none max-md:max-w-full">
+                Setup time. Open the app, start chatting immediately.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cue-hero mt-12" role="img" aria-label="Cue wordmark">
+        <div class="palette-strips" aria-hidden="true">
+          <div class="strip" style="--c: #FFFFFF"></div>
+          <div class="strip" style="--c: #DDD9FF"></div>
+          <div class="strip" style="--c: #BEB3FF"></div>
+          <div class="strip" style="--c: #A18CFF"></div>
+          <div class="strip" style="--c: #8566FF"></div>
+          <div class="strip" style="--c: #6A40F2"></div>
+          <div class="strip" style="--c: #4726D9"></div>
+          <div class="strip" style="--c: #361AB3"></div>
+          <div class="strip" style="--c: #280D80"></div>
+          <div class="strip" style="--c: #150567"></div>
+        </div>
+        <div class="hero-content">
+          <div class="wordmark">Cue</div>
+        </div>
+      </div>
+      <div class="mt-12 w-full border-t-2 border-foreground pt-10 pb-10">
+        <p class="font-serif text-4xl leading-[1.2] tracking-tighter text-foreground max-w-[800px] max-md:text-3xl">
+          Why can't my phone's AI assistant actually remember who I am?
+        </p>
+      </div>
+
+      <div class="mt-16 flex w-[842px] max-w-full flex-col pb-12 max-md:mt-10">
+        <div class="text-2xl font-semibold leading-none tracking-tighter text-foreground" tabindex="0">
+          The problem with mobile AI:
+        </div>
+        <div class="mt-6 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
+          I was a daily ZeroClaw user on desktop. It had persistent memory so it
+          knew my projects, my preferences, my ongoing context. It could use skills
+          to actually do things — search the web, read files, create calendar events.
+          Then I'd pick up my phone and every mobile AI app was back to square one.
+          No memory, no skills, no continuity. It felt like a step backwards. The
+          problem wasn't that on-device AI was weak — Apple Intelligence on iPhone
+          15 Pro is actually quite capable. The problem was that no one had built
+          the infrastructure around it.
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-10 max-md:max-w-full">
+        <div class="flex gap-1">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex min-h-[72px] flex-1 flex-col pl-7 max-md:max-w-full">
+            <div class="text-sm font-semibold leading-none tracking-tighter text-foreground" tabindex="0">No Persistent Memory</div>
+            <div class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
+              Every conversation starts from scratch. The assistant has no idea
+              what you were working on yesterday, what your preferences are, or
+              what context matters to you. This makes mobile AI feel like a toy
+              compared to what you can build on desktop.
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-1">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex min-h-[72px] flex-1 flex-col pl-7 max-md:max-w-full">
+            <div class="text-sm font-semibold leading-none tracking-tighter text-foreground" tabindex="0">No Agentic Capability</div>
+            <div class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
+              Mobile AI apps can chat but can't act. They can't read your calendar,
+              create a reminder, search the web, or operate on your files. The
+              hardware to do all of this exists on every modern iPhone — the
+              software layer just hadn't been built.
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-1">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex min-h-[72px] max-w-full flex-col pl-7">
+            <div class="text-sm font-semibold leading-none tracking-tighter text-foreground" tabindex="0">Cloud Dependency</div>
+            <div class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
+              Most capable AI assistants send your queries to a server. That's
+              a problem for sensitive conversations, for offline use, and for
+              anyone who cares about where their data goes. Apple Intelligence
+              runs on-device by default — it just needed the right runtime around it.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-sm mt-6 flex flex-col gap-4 leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
+        <p>
+          The core architectural decision was to keep the ZeroClaw memory file
+          format exactly as-is. soul.md, memory.md, agents.md — same plain text
+          format, same paths, just stored in <code>Application Support/cue/memory/</code>
+          instead of <code>~/.zeroclaw/</code>. This meant the iOS app would be
+          compatible with the desktop agent's memory files. You could theoretically
+          sync them with iCloud Drive and have continuity across both.
+        </p>
+        <p>
+          I used GRDB.swift for the SQLite layer. It gives you a Swift-native
+          interface and WAL mode out of the box for concurrent reads, which matters
+          when the agent loop is running on one thread and the UI is reading memory
+          on another. All the API keys go into Keychain with
+          <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code>.
+        </p>
+
+        <div class="text-2xl font-semibold leading-none tracking-tighter text-foreground" tabindex="0">
+          Porting the agent loop to Swift
+        </div>
+        <p>
+          The ZeroClaw agent loop is written in Node.js with an async event loop
+          managing tool calls. Swift's actor model is actually a great fit for this —
+          AgentActor is a Swift actor that handles the entire turn loop serially,
+          with async/await for the inference calls and AsyncStream for streaming
+          responses back to the UI.
+        </p>
+        <p>
+          Tool calling works via structured output: the model generates a
+          <code>ToolCallEnvelope</code> JSON struct, and CueDispatcher routes
+          it to the matching skill. The skill executes, returns a result string,
+          and the loop re-prompts with the result. The hardest part wasn't the
+          logic — it was getting Apple Foundation Models to produce reliable
+          structured output for tool calls. Guided generation helped a lot.
+        </p>
+
+        <div class="text-2xl font-semibold leading-none tracking-tighter text-foreground" tabindex="0">
+          The skill system and iOS permissions
+        </div>
+        <p>
+          iOS has a stricter permission model than desktop, which shaped how the
+          skill system works. On desktop, ZeroClaw has a shell execution skill.
+          On iOS, there's no equivalent — the sandbox won't allow it. Instead
+          Cue uses Apple Shortcuts via AppIntents as the OS automation layer.
+        </p>
+        <p>
+          The bundled skills cover the things I actually want an assistant to do
+          on my phone: add calendar events, set reminders, search the web, read
+          and write files via the document picker, and manage the clipboard.
+          Each skill is a <code>CueSkill</code> protocol conformance, registered
+          with SkillRegistry on launch.
+        </p>
+      </div>
+
+      <section class="flex max-w-[842px] mt-8 flex-col text-sm tracking-tighter" aria-labelledby="reflection-title">
+        <h2 id="reflection-title" class="text-2xl font-semibold leading-none tracking-tighter text-foreground">
+          Reflection:
+        </h2>
+        <p class="mt-6 leading-5 text-foreground max-md:max-w-full">
+          Cue has been one of the most satisfying projects I've worked on because
+          it's solving a problem I actually have. Porting the ZeroClaw runtime to
+          Swift taught me a lot about how Swift's concurrency model works in practice,
+          and working with Apple's Foundation Models API gave me a much better sense
+          of what on-device AI can actually do today.
+        </p>
+        <article class="mt-6 flex w-full gap-2">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex w-full flex-col items-start py-1 px-2 max-md:max-w-full max-md:pl-5">
+            <h3 class="text-sm font-semibold leading-none tracking-tighter text-foreground">Swift actors are excellent for agent loops:</h3>
+            <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
+              The serialized execution model of Swift actors maps almost perfectly
+              to what you want in an agent loop — one turn at a time, no concurrent
+              mutations to state, async/await for I/O. The final architecture is
+              clean in a way that the Node.js version wasn't.
+            </p>
+            <p class="mt-2 leading-loose text-accent max-md:max-w-full">
+              The right language feature for a problem makes the code almost explain itself.
+            </p>
+          </div>
+        </article>
+        <article class="mt-6 flex w-full gap-2">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex w-full flex-col items-start py-1 px-2 max-md:max-w-full max-md:pl-5">
+            <h3 class="text-sm font-semibold leading-none tracking-tighter text-foreground">File format compatibility matters more than I expected:</h3>
+            <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
+              Deciding early to keep the ZeroClaw memory file format exact was
+              the right call. It unlocked cross-device compatibility for free
+              and made the iOS app feel like a genuine extension of the desktop
+              experience rather than a separate product.
+            </p>
+            <p class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full">
+              Compatibility is a feature — don't break formats without a good reason.
+            </p>
+          </div>
+        </article>
+        <article class="mt-6 flex w-full gap-2">
+          <div class="w-1 bg-accent"></div>
+          <div class="flex w-full flex-col items-start py-1 px-2 max-md:max-w-full max-md:pl-5">
+            <h3 class="text-sm font-semibold leading-none tracking-tighter text-foreground">On-device AI is ready for real use:</h3>
+            <p class="mt-4 leading-5 text-foreground max-md:max-w-full">
+              Apple Foundation Models on iPhone 15 Pro are genuinely capable for
+              everyday assistant tasks. For most things users actually want —
+              summarize this, create a reminder, what was I working on — on-device
+              inference is fast, private, and good enough.
+            </p>
+            <p class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full">
+              The infrastructure matters more than the model size for most use cases.
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+
+  </Container>
+</Layout>
+
+<style>
+  /* ─── Hero: palette sheet ────────────────────────────────── */
+  .cue-hero {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ten horizontal bands stacked top → bottom (light → dark) */
+  .palette-strips {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .strip {
+    flex: 1;
+    width: 100%;
+    background-color: var(--c);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wordmark {
+    font-family: 'GeistPixelGrid', ui-monospace, monospace;
+    font-size: clamp(64px, 12vw, 130px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    /* sits in the middle of the gradient — use mix-blend-mode for contrast on any band */
+    color: #ffffff;
+    mix-blend-mode: difference;
+  }
+
+  /* ─── Architecture card ──────────────────────────────────── */
+  .arch-card {
+    height: 567px;
+    max-width: 100%;
+    border-radius: 0.75rem;
+    background: #0d0d0d;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+  }
+
+  .arch-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arch-file {
+    font-family: 'supply-mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    opacity: 0.6;
+  }
+
+  /* Five rows — each is a bordered strip that lights up in sequence */
+  .arch-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .arch-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    flex: 1;
+    cursor: default;
+  }
+
+  .arch-row:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* Left accent bar — animates to accent colour in sequence */
+  .row-bar {
+    width: 3px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    margin: 8px 0;
+    transition: background 0.3s;
+  }
+
+  .row-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 1rem;
+    flex: 1;
+  }
+
+  .row-name {
+    font-family: 'GeistPixelGrid', 'supply-mono', ui-monospace, monospace;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(255,255,255,0.35);
+    transition: color 0.3s;
+  }
+
+  .row-role {
+    font-family: 'supply-mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.18);
+    transition: color 0.3s;
+  }
+
+  /* Scan animation — each row lights up and fades, one after another */
+  @keyframes row-scan {
+    0%, 100%  { opacity: 0; }
+    8%, 28%   { opacity: 1; }
+  }
+
+  .row-1 .row-bar  { animation: bar-on 5s ease-in-out infinite; animation-delay: 0s; }
+  .row-2 .row-bar  { animation: bar-on 5s ease-in-out infinite; animation-delay: 1s; }
+  .row-3 .row-bar  { animation: bar-on 5s ease-in-out infinite; animation-delay: 2s; }
+  .row-4 .row-bar  { animation: bar-on 5s ease-in-out infinite; animation-delay: 3s; }
+  .row-5 .row-bar  { animation: bar-on 5s ease-in-out infinite; animation-delay: 4s; }
+
+  .row-1 .row-name { animation: name-on 5s ease-in-out infinite; animation-delay: 0s; }
+  .row-2 .row-name { animation: name-on 5s ease-in-out infinite; animation-delay: 1s; }
+  .row-3 .row-name { animation: name-on 5s ease-in-out infinite; animation-delay: 2s; }
+  .row-4 .row-name { animation: name-on 5s ease-in-out infinite; animation-delay: 3s; }
+  .row-5 .row-name { animation: name-on 5s ease-in-out infinite; animation-delay: 4s; }
+
+  .row-1 .row-role { animation: role-on 5s ease-in-out infinite; animation-delay: 0s; }
+  .row-2 .row-role { animation: role-on 5s ease-in-out infinite; animation-delay: 1s; }
+  .row-3 .row-role { animation: role-on 5s ease-in-out infinite; animation-delay: 2s; }
+  .row-4 .row-role { animation: role-on 5s ease-in-out infinite; animation-delay: 3s; }
+  .row-5 .row-role { animation: role-on 5s ease-in-out infinite; animation-delay: 4s; }
+
+  @keyframes bar-on {
+    0%, 100%  { background: rgba(255,255,255,0.08); }
+    8%, 22%   { background: var(--color-accent); }
+  }
+  @keyframes name-on {
+    0%, 100%  { color: rgba(255,255,255,0.35); }
+    8%, 22%   { color: rgba(255,255,255,0.95); }
+  }
+  @keyframes role-on {
+    0%, 100%  { color: rgba(255,255,255,0.18); }
+    8%, 22%   { color: rgba(255,255,255,0.55); }
+  }
+
+</style>
+

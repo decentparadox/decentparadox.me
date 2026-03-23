@@ -46,4 +46,7 @@ import Favicons from './Favicons.astro'
   <ClientRouter />
 
   <slot />
+  {import.meta.env.DEV && (
+    <script is:inline src="//unpkg.com/react-grab/dist/index.global.js" />
+  )}
 </head>
