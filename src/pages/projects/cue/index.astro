@@ -24,8 +24,8 @@ import Layout from '@/layouts/Layout.astro'
             Cue
           </h1>
           <div class="mt-5 text-lg font-medium leading-tight tracking-tighter text-foreground max-md:max-w-full">
-            A native iOS AI assistant powered by Apple Intelligence, with
-            persistent memory and an extensible skill system — no setup, no cloud
+            A native iOS port of ZeroClaw — persistent memory, a skill system,
+            and on-device AI via Apple Intelligence. No account, no cloud.
           </div>
         </div>
         <div class="flex w-full items-center justify-between gap-2 self-start text-right text-sm leading-loose tracking-tighter text-accent md:w-auto md:flex-col">
@@ -65,8 +65,8 @@ import Layout from '@/layouts/Layout.astro'
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
               Rebuilt the ZeroClaw agent loop as a Swift actor using async/await
-              and structured concurrency — same loop that runs on desktop, now
-              running on-device on iOS 18
+              and structured concurrency. Same loop that runs on desktop, now
+              running on-device on iOS 18.
             </li>
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
@@ -81,7 +81,7 @@ import Layout from '@/layouts/Layout.astro'
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
               External provider support (OpenAI, Anthropic, Groq) as optional
-              BYOK fallbacks when you want a more capable model
+              BYOK fallbacks if you want a more capable model
             </li>
           </ul>
         </div>
@@ -170,8 +170,8 @@ import Layout from '@/layouts/Layout.astro'
           <div class="ml-5 flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
             <div class="flex w-full grow flex-col items-start rounded-xl bg-foreground py-7 pl-6 pr-20 text-2xl font-semibold tracking-tighter text-background max-md:mt-6 max-md:max-w-full max-md:px-5" tabindex="0">
               <div class="leading-8 max-md:max-w-full">
-                Every mobile AI app is just a chat window. Cue is an agent
-                with memory that runs entirely on your device.
+                Every mobile AI app I tried was just a chat box with no memory
+                and no actions. Cue is what I actually wanted to exist.
               </div>
               <div class="mt-60 font-serif text-6xl leading-none tracking-tighter text-[#8566FF] dark:text-accent max-md:mt-10 max-md:text-4xl" aria-label="Zero seconds setup time">
                 0s
@@ -229,10 +229,10 @@ import Layout from '@/layouts/Layout.astro'
           <div class="flex min-h-[72px] flex-1 flex-col pl-7 max-md:max-w-full">
             <div class="text-sm font-semibold leading-none tracking-tighter text-foreground" tabindex="0">No Persistent Memory</div>
             <div class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
-              Every conversation starts from scratch. The assistant has no idea
-              what you were working on yesterday, what your preferences are, or
-              what context matters to you. This makes mobile AI feel like a toy
-              compared to what you can build on desktop.
+              Every conversation starts from scratch. It has no idea what you were
+              working on yesterday, what your name is, what your preferences are.
+              On desktop I had persistent context that actually followed me around.
+              On iOS it was like starting over from zero every time I opened an app.
             </div>
           </div>
         </div>
@@ -241,10 +241,10 @@ import Layout from '@/layouts/Layout.astro'
           <div class="flex min-h-[72px] flex-1 flex-col pl-7 max-md:max-w-full">
             <div class="text-sm font-semibold leading-none tracking-tighter text-foreground" tabindex="0">No Agentic Capability</div>
             <div class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
-              Mobile AI apps can chat but can't act. They can't read your calendar,
-              create a reminder, search the web, or operate on your files. The
-              hardware to do all of this exists on every modern iPhone — the
-              software layer just hadn't been built.
+              Mobile AI apps can chat but they can't do anything. They can't check
+              your calendar, set a reminder, or search the web. Every modern iPhone
+              has all the hardware you'd need for this. Nobody had built the runtime
+              around it yet.
             </div>
           </div>
         </div>
@@ -253,10 +253,10 @@ import Layout from '@/layouts/Layout.astro'
           <div class="flex min-h-[72px] max-w-full flex-col pl-7">
             <div class="text-sm font-semibold leading-none tracking-tighter text-foreground" tabindex="0">Cloud Dependency</div>
             <div class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full" tabindex="0">
-              Most capable AI assistants send your queries to a server. That's
-              a problem for sensitive conversations, for offline use, and for
-              anyone who cares about where their data goes. Apple Intelligence
-              runs on-device by default — it just needed the right runtime around it.
+              Most of the capable AI apps on iOS route everything through a server.
+              That bothered me — I'd be storing personal context there, and I wanted
+              it to work offline too. Apple Intelligence already runs on-device.
+              I just needed to build the right runtime around it.
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@ import Layout from '@/layouts/Layout.astro'
               experience rather than a separate product.
             </p>
             <p class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full">
-              Compatibility is a feature — don't break formats without a good reason.
+              Keeping the format compatible felt like a small call at the time. Turned out to be one of the best decisions in the whole project.
             </p>
           </div>
         </article>
@@ -546,4 +546,3 @@ import Layout from '@/layouts/Layout.astro'
   }
 
 </style>
-
