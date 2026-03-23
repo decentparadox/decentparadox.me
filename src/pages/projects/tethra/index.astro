@@ -28,8 +28,8 @@ import Layout from '@/layouts/Layout.astro'
           <div
             class="mt-5 text-lg font-medium leading-tight tracking-tighter text-foreground max-md:max-w-full"
           >
-            A desktop AI chat app that keeps your conversations local and lets
-            you share them on the web.
+            A desktop AI chat app — conversations stay on your machine, and you
+            can share any of them as a public link when you want.
           </div>
         </div>
         <div
@@ -87,13 +87,14 @@ import Layout from '@/layouts/Layout.astro'
             </li>
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
-              Integrated OpenAI, Anthropic, Google, and DeepSeek via the Vercel AI
-              SDK for a consistent streaming interface across all providers
+              Hooked up OpenAI, Anthropic, Google, and DeepSeek via the Vercel AI
+              SDK — it handles the streaming differences so the interface stays
+              consistent regardless of which model you're talking to
             </li>
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
-              Designed a web sharing system that publishes conversations as
-              read-only public URLs without requiring any authentication
+              Built a web sharing system where publishing a conversation creates
+              a read-only public URL — no login required to view it
             </li>
             <li class="flex gap-2">
               <div class="w-1 bg-accent"></div>
@@ -255,9 +256,9 @@ import Layout from '@/layouts/Layout.astro'
               class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
               tabindex="0"
             >
-              Every AI provider is its own silo. Conversations don't travel
-              between apps, so you end up either sticking to one model or
-              losing context every time you switch. Neither is great.
+              Every AI provider lives in its own bubble. Conversations don't
+              carry over between apps, so you're either locked into one model
+              or constantly re-explaining where you left off. It got old fast.
             </div>
           </div>
         </div>
@@ -274,9 +275,9 @@ import Layout from '@/layouts/Layout.astro'
               class="mt-3 text-sm leading-5 tracking-tighter text-foreground max-md:max-w-full"
               tabindex="0"
             >
-              With web-based interfaces, all your conversations live on external
-              servers. There's no local copy, no offline access, and no guarantee
-              about how long they'll be retained or what they're used for.
+              When you use web-based AI tools, your conversations sit on someone
+              else's server. No local copy, no offline access, and no real clarity
+              on what happens to them long-term.
             </div>
           </div>
         </div>
@@ -294,9 +295,9 @@ import Layout from '@/layouts/Layout.astro'
               tabindex="0"
             >
               Sharing a useful conversation usually means screenshotting it or
-              copying the text. ChatGPT added share links but you're still
-              locked into one provider. There was no clean way to share from
-              a local-first app.
+              copying a wall of text. ChatGPT added share links eventually, but
+              you're still on their platform. There was no good way to share
+              from a local-first app.
             </div>
           </div>
         </div>
@@ -432,7 +433,7 @@ import Layout from '@/layouts/Layout.astro'
               for most use cases the abstraction is the right call.
             </p>
             <p class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full">
-              Good abstractions exist for a reason — use them.
+              The SDK saved me weeks of chasing provider quirks. When a good abstraction exists, just use it.
             </p>
           </div>
         </article>
@@ -451,8 +452,7 @@ import Layout from '@/layouts/Layout.astro'
               the snapshot model turned out to be the right answer.
             </p>
             <p class="mt-2 leading-loose text-accent max-md:mt-10 max-md:max-w-full">
-              The architecture of your app shapes what you can and can't
-              build later — choose it deliberately.
+              Going local-first set the constraints for everything else. It was the right call, but I had to think through every feature with that in mind.
             </p>
           </div>
         </article>
