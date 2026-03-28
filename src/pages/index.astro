@@ -4,6 +4,7 @@ import BlogCard from '@/components/BlogCard.astro'
 import Container from '@/components/Container.astro'
 import Hero from '@/components/Hero.astro'
 import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact.astro'
 import { SITE } from '@/consts'
@@ -16,6 +17,7 @@ const blog = (await getCollection('blog'))
 ---
 
 <Layout title="Home" description={SITE.DESCRIPTION}>
+  <PageHead slot="head" title="I turn designs into functional apps" description={SITE.DESCRIPTION} />
   <Container class="flex flex-col gap-y-6">
     <section>
       <Hero />
